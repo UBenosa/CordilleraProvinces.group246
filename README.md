@@ -3,6 +3,7 @@
 - ~~Add province images on homepage~~
 - ~~Show province title on image hover~~
 - ~~Scroll horizontally to images using mouse~~
+- Added: mouse pointer animation
 - Zoom on image click (unsure if will do)
 - Show text on zoomed image scroll down
 - Format province article text
