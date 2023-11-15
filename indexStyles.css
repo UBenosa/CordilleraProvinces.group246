@@ -4,6 +4,7 @@ body {
     background-color: black;
     margin: 0rem;
     overflow: hidden;
+    cursor: none;
 }
 
 #image-track {
@@ -28,8 +29,8 @@ body {
     backface-visibility: hidden;
 }
 
-#image-track .image:hover {
-    opacity: 0.3;
+.image-container:hover .image {
+    filter: brightness(0.3);
 }
 
 .image-container:hover .text {
