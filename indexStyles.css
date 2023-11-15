@@ -1,61 +1,62 @@
 body {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  margin: 0rem;
-  overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
 }
 
 #image-track {
-  display: flex;
-  gap: 4vmin;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(0%, -50%);
-  user-select: none; /* -- Prevent image highlighting -- */
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+    /* -- Prevent image highlighting -- */
 }
 
 #image-track .image {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: 100% center;
-  opacity: 1;
-  display: block;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    opacity: 1;
+    display: block;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
 }
 
 #image-track .image:hover {
-  opacity: 0.3;
+    opacity: 0.3;
 }
 
 .image-container:hover .text {
-  opacity: 1;
+    opacity: 1;
 }
 
 .image-container:hover {
-  transform: scale(1.05)
+    transform: scale(1.05);
 }
 
 .image-container {
-  text-align: center;
-  position: relative;
-  transition: 0.5s ease;
+    text-align: center;
+    position: relative;
+    transition: 0.5s ease;
 }
 
 .image-container .text {
-  color: white;
-  font-size: 4vmin;
-  opacity: 0;
+    color: white;
+    font-size: 4vmin;
+    opacity: 0;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-  transition: 0.5s ease;
+    transition: 0.5s ease;
 }
