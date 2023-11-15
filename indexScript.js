@@ -106,20 +106,31 @@ animateCircles();
 
 // Zoom In
 function zoomImage(id) {
-    console.log(id + ' clicked.')
     body = document.getElementsByTagName("BODY")[0];
+    imageTrack = document.getElementById("image-track");
     imageContainer = document.getElementById(id);
     image = imageContainer.querySelector('img');
 
-    // Removes image from flexbox
-    body.append(imageContainer);
+    
 
     // Removes hover effect
     imageContainer.classList.remove('hover-effect')
 
     // Initiates animations
+    console.log(imageContainer)
+    console.log(imageTrack.firstElementChild)
+    if (imageContainer === imageTrack.firstElementChild) {
+        imageTrack.style.animation = 'track-zoom-1st 1s ease forwards';
+    }
+    else {
+        imageTrack.style.animation = 'track-zoom 1s ease forwards';
+    }
+
     imageContainer.style.animation = 'container-zoom 1s ease forwards';
     image.style.animation = 'image-zoom 1s ease forwards';
+    
+    // body.append(imageContainer);
+    
     
     
 

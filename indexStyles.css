@@ -15,16 +15,16 @@ body {
     top: 50%;
     transform: translate(0%, -50%);
     user-select: none;
+    overflow: hidden;
 }
 
-
-
 .image-container {
-    overflow: hidden;
     position: relative;
     transition: 0.7s ease, transform 1s ease;
     transform-origin: center;
-    background-color: #fff;
+    width: 40vmin;
+    height: 56vmin;
+    overflow: hidden;
 }
 
 .image-container:hover .image {
@@ -74,7 +74,7 @@ body {
     mix-blend-mode: difference;
     top: 0;
     left: 0;
-    z-index: 9999999999999999;  
+    z-index: 9999999999999999;
 }
 
 .circle {
@@ -88,25 +88,55 @@ body {
     box-shadow: 0px 0px 0px 5px #fff;
 }
 
+#line {
+    border-left: 2px solid red;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes track-zoom {
+    to {
+        transform: translate(6%, -50%);
+    }
+}
+
+@keyframes track-zoom-1st {
+    to {
+        transform: translate(-22%, -50%);
+    }
+}
+
 @keyframes container-zoom {
     from {
-        width: 0px;
-        height: 0px;
+        width: 40vmin;
+        height: 56vmin;
     }
     to {
-        width: 100vw;
+        width: 1920px;
         height: 100vh;
         transform: translate(0%, 0%);
     }
 }
 
-@keyframes image-zoom {
+@keyframes container-zoom-1st {
     from {
-        width: 0px;
-        height: 0px;
+        width: 40vmin;
+        height: 56vmin;
     }
     to {
-        width: 100vw;
+        width: 110vw;
+        height: auto;
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes image-zoom {
+    to {
+        width: 110vw;
         height: 100vh;
         transform: translate(0%, 0%);
     }
