@@ -104,5 +104,29 @@ function animateCircles() {
 
 animateCircles();
 
+// Zoom In
+function zoomImage(id) {
+    console.log(id + ' clicked.')
+    body = document.getElementsByTagName("BODY")[0];
+    imageContainer = document.getElementById(id);
+    image = imageContainer.querySelector('img');
+
+    // Removes image from flexbox
+    body.append(imageContainer);
+
+    // Removes hover effect
+    imageContainer.classList.remove('hover-effect')
+
+    // Initiates animations
+    imageContainer.style.animation = 'container-zoom 1s ease forwards';
+    image.style.animation = 'image-zoom 1s ease forwards';
+    
+    
+
+    
+
+}
+
+
 
 
