@@ -1,15 +1,11 @@
 {
-  "extends": [
-    "development"
-  ],
-  "hints": {
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "user-select"
+    "extends": ["development"],
+    "hints": {
+        "compat-api/css": [
+            "default",
+            {
+                "ignore": ["user-select"]
+            }
         ]
-      }
-    ]
-  }
+    }
 }
