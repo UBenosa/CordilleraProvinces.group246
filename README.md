@@ -5,7 +5,7 @@
 - ~~Scroll horizontally to images using mouse~~
 - Added: mouse pointer animation
 - ~~Fix scroll wheel and drag interaction bug (can't drag anymore if scrolled first)~~
-- Zoom on image click (unsure if will do)
+- Fix: Center the text when zooming in on click
 - Show text on zoomed image scroll down
 - Format province article text
 - Add home button
