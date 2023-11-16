@@ -61,7 +61,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     transition: 0.5s ease;
 }
 
@@ -98,46 +97,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
-@keyframes track-zoom {
-    to {
-        transform: translate(6%, -50%);
-    }
+.image-container.darken {
+    filter: brightness(0);
 }
 
-@keyframes track-zoom-1st {
-    to {
-        transform: translate(-22%, -50%);
-    }
-}
-
-@keyframes container-zoom {
-    from {
-        width: 40vmin;
-        height: 56vmin;
-    }
-    to {
-        width: 1920px;
-        height: 100vh;
-        transform: translate(0%, 0%);
-    }
-}
-
-@keyframes container-zoom-1st {
-    from {
-        width: 40vmin;
-        height: 56vmin;
-    }
-    to {
-        width: 110vw;
-        height: auto;
-        transform: translate(0%, 0%);
-    }
-}
-
-@keyframes image-zoom {
-    to {
-        width: 110vw;
-        height: 100vh;
-        transform: translate(0%, 0%);
-    }
+.text.zoom {
+    transform-origin: center;
+    transform: scale(2) translate(0%, 0%);
 }
