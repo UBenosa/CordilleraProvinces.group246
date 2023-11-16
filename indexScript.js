@@ -1,10 +1,13 @@
 // Mouse dragging handler
 const track = document.getElementById("image-track");
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+const handleOnDown = e => {
+    track.dataset.mouseDownAt = e.clientX;
+    track.dataset.prevPercentage = track.dataset.percentage || "0"; // Initialize prevPercentage if it doesn't exist
+};
 const handleOnUp = () => {
-    track.dataset.mouseDownAt = "0";  
+    track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = track.dataset.percentage;
-}
+};
 const handleOnMove = e => {
     if (track.dataset.mouseDownAt === "0") return;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
@@ -16,23 +19,29 @@ const handleOnMove = e => {
 
     track.dataset.percentage = nextPercentage;
 
-    track.animate({
-        transform: `translate(${nextPercentage}%, -50%)`
-    }, { duration: 800, fill: "both", easing: "ease-out" });
+    track.animate(
+        {
+            transform: `translate(${nextPercentage}%, -50%)`,
+        },
+        { duration: 800, fill: "both", easing: "ease-out" }
+    );
 
     const images = track.getElementsByClassName("image");
     for (const image of images) {
-        image.animate({
-            objectPosition: `${100 + nextPercentage}% center`
-        }, { duration: 800, fill: "forwards", easing: "ease-out" });
+        image.animate(
+            {
+                objectPosition: `${100 + nextPercentage}% center`,
+            },
+            { duration: 800, fill: "forwards", easing: "ease-out" }
+        );
     }
-}
+};
 
 // Scroll wheel handler
 const handleOnScroll = e => {
     const scrollDelta = e.deltaY;
     const maxDelta = window.innerHeight / 2;
-    track.dataset.prevPercentage = track.dataset.percentage;
+    track.dataset.prevPercentage = track.dataset.percentage || "0"; // Update prevPercentage when scrolling
 
     const percentage = (scrollDelta / maxDelta) * -100;
     const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
@@ -40,17 +49,23 @@ const handleOnScroll = e => {
 
     track.dataset.percentage = nextPercentage;
 
-    track.animate({
-        transform: `translate(${nextPercentage}%, -50%)`
-    }, { duration: 1200, fill: "both", easing: "ease-out" });
+    track.animate(
+        {
+            transform: `translate(${nextPercentage}%, -50%)`,
+        },
+        { duration: 1200, fill: "both", easing: "ease-out" }
+    );
 
     const images = track.getElementsByClassName("image");
     for (const image of images) {
-        image.animate({
-            objectPosition: `${100 + nextPercentage}% center`
-        }, { duration: 1500, fill: "forwards", easing: "ease-out" });
+        image.animate(
+            {
+                objectPosition: `${100 + nextPercentage}% center`,
+            },
+            { duration: 1500, fill: "forwards", easing: "ease-out" }
+        );
     }
-}
+};
 
 // Mouse Drag Event listeners
 window.onmousedown = e => handleOnDown(e);
@@ -130,14 +145,4 @@ function zoomImage(id) {
     image.style.animation = 'image-zoom 1s ease forwards';
     
     // body.append(imageContainer);
-    
-    
-    
-
-    
-
 }
-
-
-
-
