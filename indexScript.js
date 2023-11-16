@@ -119,30 +119,28 @@ function animateCircles() {
 
 animateCircles();
 
-// Zoom In
-function zoomImage(id) {
-    body = document.getElementsByTagName("BODY")[0];
-    imageTrack = document.getElementById("image-track");
-    imageContainer = document.getElementById(id);
-    image = imageContainer.querySelector('img');
+function zoomImage(containerId) {
+    const imageContainers = document.querySelectorAll(".image-container");
+    const imageMap = {
+        abra: "Images/Abra.jpg",
+        apayao: "Images/Apayao.jpg",
+        benguet: "Images/Benguet.jpg",
+        ifugao: "Images/Ifugao.jpg",
+        kalinga: "Images/Kalinga.jpg",
+        "mountain-province": "Images/Mountain Province.jpg",
+    };
 
-    
+    imageContainers.forEach((container) => {
+        const id = container.getAttribute("id");
+        container.classList.add("darken");
+        const text = container.querySelector(".text");
+        text.classList.add("zoom");
+        container.addEventListener("click", () => {
+        window.location.href = imageMap[id];
+        });
+    });
 
-    // Removes hover effect
-    imageContainer.classList.remove('hover-effect')
-
-    // Initiates animations
-    console.log(imageContainer)
-    console.log(imageTrack.firstElementChild)
-    if (imageContainer === imageTrack.firstElementChild) {
-        imageTrack.style.animation = 'track-zoom-1st 1s ease forwards';
-    }
-    else {
-        imageTrack.style.animation = 'track-zoom 1s ease forwards';
-    }
-
-    imageContainer.style.animation = 'container-zoom 1s ease forwards';
-    image.style.animation = 'image-zoom 1s ease forwards';
-    
-    // body.append(imageContainer);
+    setTimeout(() => {
+        window.location.href = imageMap[containerId];
+    }, 1000);
 }
