@@ -101,7 +101,3 @@ body {
     filter: brightness(0);
 }
 
-.text.zoom {
-    transform-origin: center;
-    transform: scale(2) translate(0%, 0%);
-}
