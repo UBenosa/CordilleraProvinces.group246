@@ -129,7 +129,8 @@ function zoomImage(containerId) {
         kalinga: "Images/Kalinga.jpg",
         "mountain-province": "Images/Mountain Province.jpg",
     };
-
+    document.getElementsByTagName('h1')[0].classList.add("darken");
+    
     imageContainers.forEach((container) => {
         const id = container.getAttribute("id");
         container.classList.add("darken");
@@ -139,7 +140,7 @@ function zoomImage(containerId) {
         window.location.href = imageMap[id];
         });
     });
-
+    
     setTimeout(() => {
         window.location.href = imageMap[containerId];
     }, 1000);

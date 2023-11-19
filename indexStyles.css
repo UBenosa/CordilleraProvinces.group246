@@ -101,3 +101,13 @@ body {
     filter: brightness(0);
 }
 
+.darken {
+    filter: brightness(0);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3.5rem;
+    transition: 0.7s ease, transform 1s ease;
+}
