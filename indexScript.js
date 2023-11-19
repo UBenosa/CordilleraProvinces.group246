@@ -32,10 +32,19 @@ const handleOnMove = e => {
             {
                 objectPosition: `${100 + nextPercentage}% center`,
             },
-            { duration: 800, fill: "forwards", easing: "ease-out" }
+            { duration: 1100, fill: "forwards", easing: "ease-out" }
         );
     }
+
+    const scrollbar = document.getElementById("scrollbar-circle");
+    scrollbar.animate(
+        {
+            left: `${-nextPercentage - 2}%`,
+        },
+        {duration: 800, fill: "forwards", easing: 'ease-out'}
+    )
 };
+
 
 // Scroll wheel handler
 const handleOnScroll = e => {
@@ -53,7 +62,7 @@ const handleOnScroll = e => {
         {
             transform: `translate(${nextPercentage}%, -50%)`,
         },
-        { duration: 1200, fill: "both", easing: "ease-out" }
+        { duration: 800, fill: "both", easing: "ease-out" }
     );
 
     const images = track.getElementsByClassName("image");
@@ -62,9 +71,17 @@ const handleOnScroll = e => {
             {
                 objectPosition: `${100 + nextPercentage}% center`,
             },
-            { duration: 1500, fill: "forwards", easing: "ease-out" }
+            { duration: 1100, fill: "forwards", easing: "ease-out" }
         );
     }
+
+    const scrollbar = document.getElementById("scrollbar-circle");
+    scrollbar.animate(
+        {
+            left: `${-nextPercentage - 2}%`,
+        },
+        {duration: 800, fill: "forwards", easing: 'ease-out'}
+    )
 };
 
 // Mouse Drag Event listeners
@@ -130,7 +147,7 @@ function zoomImage(containerId) {
         "mountain-province": "Images/Mountain Province.jpg",
     };
     document.getElementsByTagName('h1')[0].classList.add("darken");
-    
+
     imageContainers.forEach((container) => {
         const id = container.getAttribute("id");
         container.classList.add("darken");

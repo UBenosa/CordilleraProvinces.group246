@@ -111,3 +111,23 @@ h1 {
     font-size: 3.5rem;
     transition: 0.7s ease, transform 1s ease;
 }
+
+#scrollbar-body {
+    display: block;
+    width: 650px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #414141;
+    margin: auto;
+    width: 50%;
+    margin-top: 87vh;
+}
+
+#scrollbar-circle {
+    width: 20px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: relative;
+    left: 0%;
+}
