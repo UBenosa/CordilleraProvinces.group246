@@ -1,5 +1,10 @@
+r = document.querySelector(':root');
+
+
 // Mouse dragging handler
 const track = document.getElementById("image-track");
+const translateX = 8.5
+r.style.setProperty('--translateX', `${-translateX}%`);
 const handleOnDown = e => {
     track.dataset.mouseDownAt = e.clientX;
     track.dataset.prevPercentage = track.dataset.percentage || "0"; // Initialize prevPercentage if it doesn't exist
@@ -21,9 +26,9 @@ const handleOnMove = e => {
 
     track.animate(
         {
-            transform: `translate(${nextPercentage}%, -50%)`,
+            transform: `translate(${nextPercentage - translateX}%, -50%)`,
         },
-        { duration: 800, fill: "both", easing: "ease-out" }
+        { duration: 1000, fill: "both", easing: "ease-out" }
     );
 
     const images = track.getElementsByClassName("image");
@@ -32,19 +37,11 @@ const handleOnMove = e => {
             {
                 objectPosition: `${100 + nextPercentage}% center`,
             },
-            { duration: 1100, fill: "forwards", easing: "ease-out" }
+            { duration: 1300, fill: "forwards", easing: "ease-out" }
         );
     }
-
-    const scrollbar = document.getElementById("scrollbar-circle");
-    scrollbar.animate(
-        {
-            left: `${-nextPercentage - 2}%`,
-        },
-        {duration: 800, fill: "forwards", easing: 'ease-out'}
-    )
+    animate_scrollbar()
 };
-
 
 // Scroll wheel handler
 const handleOnScroll = e => {
@@ -60,9 +57,9 @@ const handleOnScroll = e => {
 
     track.animate(
         {
-            transform: `translate(${nextPercentage}%, -50%)`,
+            transform: `translate(${nextPercentage - translateX}%, -50%)`,
         },
-        { duration: 800, fill: "both", easing: "ease-out" }
+        { duration: 1000, fill: "both", easing: "ease-out" }
     );
 
     const images = track.getElementsByClassName("image");
@@ -71,18 +68,23 @@ const handleOnScroll = e => {
             {
                 objectPosition: `${100 + nextPercentage}% center`,
             },
-            { duration: 1100, fill: "forwards", easing: "ease-out" }
+            { duration: 1300, fill: "forwards", easing: "ease-out" }
         );
     }
 
-    const scrollbar = document.getElementById("scrollbar-circle");
+    animate_scrollbar()
+};
+
+function animate_scrollbar() {
+    const scrollbar = document.getElementById("scrollbar-thumb");
     scrollbar.animate(
         {
-            left: `${-nextPercentage - 2}%`,
+            transform: `translate(${-nextPercentage*3}%)`,
         },
-        {duration: 800, fill: "forwards", easing: 'ease-out'}
+        {duration: 1000, fill: "forwards", easing: 'ease-out'}
     )
-};
+}
+
 
 // Mouse Drag Event listeners
 window.onmousedown = e => handleOnDown(e);
