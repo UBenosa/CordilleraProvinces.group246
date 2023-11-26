@@ -13,29 +13,32 @@ const handleOnUp = () => {
 };
 const handleOnMove = e => {
     if (track.dataset.mouseDownAt === "0") return;
-    
-    const delta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
     const maxDelta = window.innerWidth / 2;
-    const percentage = (delta / maxDelta) * -100;
 
-    animateImages(percentage, delta, maxDelta);
+    const percentage = (mouseDelta / maxDelta) * -100;
+    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    
+    track.dataset.percentage = nextPercentage;
+
+    animateImages(nextPercentage);
 };
 
 // Scroll wheel handler
 const handleOnScroll = e => {
-    const delta = e.deltaY;
+    const scrollDelta = e.deltaY;
     const maxDelta = window.innerHeight / 2;
-    const percentage = (delta / maxDelta) * -100;
-
-    animateImages(percentage, delta, maxDelta);
-};
-
-function animateImages(percentage) {
+    track.dataset.prevPercentage = track.dataset.percentage || "0";
+    const percentage = (scrollDelta / maxDelta) * -100;
     const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-    track.dataset.prevPercentage = track.dataset.percentage || "0"; // Update prevPercentage when scrolling
-    track.dataset.percentage = nextPercentage;
 
+    track.dataset.percentage = nextPercentage;
+    animateImages(nextPercentage);
+};
+
+function animateImages(nextPercentage) {
     // Container animation
     track.animate(
         {
@@ -63,6 +66,7 @@ function animateImages(percentage) {
             { duration: 1300, fill: "forwards", easing: "ease-out" }
         );
     }
+    
 }
 
 // Mouse Drag Event listeners
