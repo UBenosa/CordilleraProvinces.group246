@@ -6,6 +6,7 @@
 - Added: mouse pointer animation
 - ~~Fix scroll wheel and drag interaction bug (can't drag anymore if scrolled first)~~
 - Fix: Center the text when zooming in on click
+- Fix: scroll bar exceeding limit
 - Show text on zoomed image scroll down
 - Format province article text
 - Add home button
