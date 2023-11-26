@@ -65,7 +65,6 @@ function animateImages(percentage) {
     }
 }
 
-
 // Mouse Drag Event listeners
 window.onmousedown = e => handleOnDown(e);
 window.ontouchstart = e => handleOnDown(e.touches[0]);
@@ -75,10 +74,10 @@ window.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 window.onwheel = e => handleOnScroll(e);
 
+
 // For cursor animation
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
-
 const cursor = document.querySelector(".cursor");
 
 circles.forEach(function (circle, index) {
@@ -118,6 +117,7 @@ function animateCircles() {
 
 animateCircles();
 
+// Transition
 function zoomImage(containerId) {
     const imageContainers = document.querySelectorAll(".image-container");
     const imageMap = {
