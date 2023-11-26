@@ -1,13 +1,11 @@
 r = document.querySelector(':root');
 
-
-// Mouse dragging handler
+// Mouse drag handler
 const track = document.getElementById("image-track");
 const translateX = 8.5
 r.style.setProperty('--translateX', `${-translateX}%`);
 const handleOnDown = e => {
     track.dataset.mouseDownAt = e.clientX;
-    track.dataset.prevPercentage = track.dataset.percentage || "0"; // Initialize prevPercentage if it doesn't exist
 };
 const handleOnUp = () => {
     track.dataset.mouseDownAt = "0";
@@ -15,46 +13,30 @@ const handleOnUp = () => {
 };
 const handleOnMove = e => {
     if (track.dataset.mouseDownAt === "0") return;
-    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+    
+    const delta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
     const maxDelta = window.innerWidth / 2;
+    const percentage = (delta / maxDelta) * -100;
 
-    const percentage = (mouseDelta / maxDelta) * -100;
-    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
-    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-
-    track.dataset.percentage = nextPercentage;
-
-    track.animate(
-        {
-            transform: `translate(${nextPercentage - translateX}%, -50%)`,
-        },
-        { duration: 1000, fill: "both", easing: "ease-out" }
-    );
-
-    const images = track.getElementsByClassName("image");
-    for (const image of images) {
-        image.animate(
-            {
-                objectPosition: `${100 + nextPercentage}% center`,
-            },
-            { duration: 1300, fill: "forwards", easing: "ease-out" }
-        );
-    }
-    animate_scrollbar()
+    animateImages(percentage, delta, maxDelta);
 };
 
 // Scroll wheel handler
 const handleOnScroll = e => {
-    const scrollDelta = e.deltaY;
+    const delta = e.deltaY;
     const maxDelta = window.innerHeight / 2;
-    track.dataset.prevPercentage = track.dataset.percentage || "0"; // Update prevPercentage when scrolling
+    const percentage = (delta / maxDelta) * -100;
 
-    const percentage = (scrollDelta / maxDelta) * -100;
+    animateImages(percentage, delta, maxDelta);
+};
+
+function animateImages(percentage) {
     const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-
+    track.dataset.prevPercentage = track.dataset.percentage || "0"; // Update prevPercentage when scrolling
     track.dataset.percentage = nextPercentage;
 
+    // Container animation
     track.animate(
         {
             transform: `translate(${nextPercentage - translateX}%, -50%)`,
@@ -62,20 +44,7 @@ const handleOnScroll = e => {
         { duration: 1000, fill: "both", easing: "ease-out" }
     );
 
-    const images = track.getElementsByClassName("image");
-    for (const image of images) {
-        image.animate(
-            {
-                objectPosition: `${100 + nextPercentage}% center`,
-            },
-            { duration: 1300, fill: "forwards", easing: "ease-out" }
-        );
-    }
-
-    animate_scrollbar()
-};
-
-function animate_scrollbar() {
+    // Scrollbar animation
     const scrollbar = document.getElementById("scrollbar-thumb");
     scrollbar.animate(
         {
@@ -83,6 +52,17 @@ function animate_scrollbar() {
         },
         {duration: 1000, fill: "forwards", easing: 'ease-out'}
     )
+
+    // Images parallax animation
+    const images = track.getElementsByClassName("image");
+    for (const image of images) {
+        image.animate(
+            {
+                objectPosition: `${100 + nextPercentage}% center`,
+            },
+            { duration: 1300, fill: "forwards", easing: "ease-out" }
+        );
+    }
 }
 
 
