@@ -66,7 +66,6 @@ function animateImages(nextPercentage) {
             { duration: 900, fill: "forwards", easing: "ease-out" }
         );
     }
-    
 }
 
 // Mouse Drag Event listeners
