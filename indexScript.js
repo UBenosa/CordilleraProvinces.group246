@@ -44,7 +44,7 @@ function animateImages(nextPercentage) {
         {
             transform: `translate(${nextPercentage - translateX}%, -50%)`,
         },
-        { duration: 1000, fill: "both", easing: "ease-out" }
+        { duration: 900, fill: "both", easing: "ease-out" }
     );
 
     // Scrollbar animation
@@ -53,7 +53,7 @@ function animateImages(nextPercentage) {
         {
             transform: `translate(${-nextPercentage*3}%)`,
         },
-        {duration: 1000, fill: "forwards", easing: 'ease-out'}
+        {duration: 900, fill: "forwards", easing: 'ease-out'}
     )
 
     // Images parallax animation
@@ -63,7 +63,7 @@ function animateImages(nextPercentage) {
             {
                 objectPosition: `${100 + nextPercentage}% center`,
             },
-            { duration: 1300, fill: "forwards", easing: "ease-out" }
+            { duration: 900, fill: "forwards", easing: "ease-out" }
         );
     }
     
