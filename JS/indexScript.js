@@ -1,0 +1,125 @@
+r = document.querySelector(':root');
+
+// Mouse drag handler
+const track = document.getElementById("image-track");
+const translateX = 8.5
+r.style.setProperty('--translateX', `${-translateX}%`);
+const handleOnDown = e => {
+    track.dataset.mouseDownAt = e.clientX;
+};
+const handleOnUp = () => {
+    track.dataset.mouseDownAt = "0";
+    track.dataset.prevPercentage = track.dataset.percentage;
+};
+const handleOnMove = e => {
+    if (track.dataset.mouseDownAt === "0") return;
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+    const maxDelta = window.innerWidth / 2;
+
+    const percentage = (mouseDelta / maxDelta) * -100;
+    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    
+    track.dataset.percentage = nextPercentage;
+
+    animateImages(nextPercentage);
+};
+
+// Scroll wheel handler
+const handleOnScroll = e => {
+    const scrollDelta = e.deltaY;
+    const maxDelta = window.innerHeight / 2;
+    track.dataset.prevPercentage = track.dataset.percentage || "0";
+    const percentage = (scrollDelta / maxDelta) * -100;
+    const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+    track.dataset.percentage = nextPercentage;
+    animateImages(nextPercentage);
+};
+
+function animateImages(nextPercentage) {
+    // Container animation
+    track.animate(
+        {
+            transform: `translate(${nextPercentage - translateX}%, -50%)`,
+        },
+        { duration: 900, fill: "both", easing: "ease-out" }
+    );
+
+    // Scrollbar animation
+    const scrollbar = document.getElementById("scrollbar-thumb");
+    scrollbar.animate(
+        {
+            transform: `translate(${-nextPercentage*3}%)`,
+        },
+        {duration: 900, fill: "forwards", easing: 'ease-out'}
+    )
+
+    // Images parallax animation
+    const images = track.getElementsByClassName("image");
+    for (const image of images) {
+        image.animate(
+            {
+                objectPosition: `${100 + nextPercentage}% center`,
+            },
+            { duration: 900, fill: "forwards", easing: "ease-out" }
+        );
+    }
+}
+
+// Mouse Drag Event listeners
+window.onmousedown = e => handleOnDown(e);
+window.ontouchstart = e => handleOnDown(e.touches[0]);
+window.onmouseup = e => handleOnUp(e);
+window.ontouchend = e => handleOnUp(e.touches[0]);
+window.onmousemove = e => handleOnMove(e);
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+window.onwheel = e => handleOnScroll(e);
+
+
+// For cursor animation
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+const cursor = document.querySelector(".cursor");
+
+circles.forEach(function (circle, index) {
+    circle.x = 0;
+    circle.y = 0;
+    circle.style.backgroundColor = "white";
+});
+
+window.addEventListener("mousemove", function (e) {
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+});
+
+// Transition
+function zoomImage(containerId) {
+    const imageContainers = document.querySelectorAll(".image-container");
+    const imageMap = {
+        abra: "Abra/abra.html",
+        apayao: "Images/Apayao.jpg",
+        benguet: "Images/Benguet.jpg",
+        ifugao: "Images/Ifugao.jpg",
+        kalinga: "Images/Kalinga.jpg",
+        "mountain-province": "Images/Mountain Province.jpg",
+    };
+    
+    document.getElementById('header').classList.add("darken");
+    document.getElementById('scrollbar-track').classList.add("darken");
+
+    imageContainers.forEach((container) => {
+        const id = container.getAttribute("id");
+        container.classList.add("darken");
+        const text = container.querySelector(".text");
+        text.classList.add("zoom");
+        container.addEventListener("click", () => {
+        window.location.href = imageMap[id];
+        });
+    });
+    
+    setTimeout(() => {
+        window.location.href = imageMap[containerId];
+    }, 1000);
+}

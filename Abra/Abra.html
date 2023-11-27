@@ -1,100 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Abra</title>
-        <link rel="stylesheet" href="stylesAbra.css" />
-    </head>
-    <body>
-        <!-- Parallax Header -->
-    <div class="parallax-container">
-        <div class="parallax-text">
-            <h1>Abra</h1>
-            <p>text text text text</p>
-        </div>
-        <div class="parallax-nav">
-            <nav>
-                <a href="#" onclick="toggleArticle('article1')">Article 1</a>
-                <a href="#" onclick="toggleArticle('article2')">Article 2</a>
-                <a href="#" onclick="toggleArticle('article3')">Article 3</a>
-                <a href="#" onclick="toggleArticle('article4')">Article 4</a>
-            </nav>
-        </div>
-    </div>
 
-    <!-- Articles -->
-    <div class="article" id="article1">
-        <h2>Your Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
-            nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
-            Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
-            vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
-            voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
-            voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
-            perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
-            aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
-            nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
-            nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
-            Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
-            vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
-            voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
-            voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
-            perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
-            aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
-            nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
-            nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
-            Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
-            vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
-            voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
-            voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
-            perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
-            aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
-            nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
-    </div>
-    
-    <div class="article" id="article2">
-        <h2>Your Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
-            nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
-            Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
-            vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
-            voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
-            voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
-            perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
-            aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
-            nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abra</title>
+  <link rel="stylesheet" href="../CSS/stylesArticles.css" />
+</head>
 
-    <div class="article" id="article3">
-        <h2>Your Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
-            nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
-            Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
-            vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
-            voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
-            voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
-            perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
-            aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
-            nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+<body>
+  <!-- Parallax Header -->
+  <div class="parallax-container" style="background: url('../images/Abra.jpg') center/cover no-repeat fixed;">
+    <div class="parallax-text">
+      <h1>Abra</h1>
+      <p>text text text text</p>
     </div>
+    <div class="parallax-nav">
+      <nav>
+        <a href="#" onclick="toggleArticle('article1')">Article 1</a>
+        <a href="#" onclick="toggleArticle('article2')">Article 2</a>
+        <a href="#" onclick="toggleArticle('article3')">Article 3</a>
+        <a href="#" onclick="toggleArticle('article4')">Article 4</a>
+      </nav>
+    </div>
+  </div>
 
-    <div class="article" id="article4">
-        <h2>Your Article Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
-            nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
-            Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
-            vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
-            voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
-            voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
-            perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
-            aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
-            nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
-    </div>
-    <script src="scriptAbra.js"></script>
-    </body>
+  <!-- Articles -->
+  <div class="article" id="article1">
+    <h2>Your Article Title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+      nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+      Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+      vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+      voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+      voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+      perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+      aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+      nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+      nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+      Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+      vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+      voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+      voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+      perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+      aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+      nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+      nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+      Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+      vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+      voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+      voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+      perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+      aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+      nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+  </div>
+
+  <div class="article" id="article2">
+    <h2>Your Article Title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+      nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+      Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+      vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+      voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+      voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+      perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+      aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+      nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+  </div>
+
+  <div class="article" id="article3">
+    <h2>Your Article Title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+      nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+      Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+      vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+      voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+      voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+      perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+      aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+      nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+  </div>
+
+  <div class="article" id="article4">
+    <h2>Your Article Title</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum veritatis
+      nemo magni odio reprehenderit atque, esse animi porro suscipit vero nobis modi quis.
+      Exercitationem quasi beatae, assumenda officia illum sunt. Cum voluptas maiores
+      vitae eius hic inventore deleniti placeat perferendis quam ut nostrum maxime optio
+      voluptatibus ab laboriosam, quia consectetur atque minus? Adipisci amet aut sint
+      voluptates delectus aperiam? Veniam ab illum enim in libero nihil culpa explicabo
+      perspiciatis veritatis non repellendus architecto excepturi nostrum porro voluptatem
+      aperiam animi asperiores, a voluptatibus temporibus minima voluptas ipsa! Recusandae
+      nostrum, aut, voluptates est error iusto, eaque excepturi soluta quas maiores amet.</p>
+  </div>
+
+  <!-- for cursor animation -->
+  <div class="cursor">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <script src="../JS/scriptArticles.js"></script>
+</body>
+
 </html>
