@@ -22,7 +22,7 @@ body {
 .parallax-container {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: #fff; /* Text color on top of the image */
     text-align: center;
     display: flex;
@@ -34,6 +34,8 @@ body {
 .parallax-text {
     font-size: 2em;
     animation: slideUp 0.8s ease forwards;
+    position: absolute;
+    width: 50%;
 }
 
 @keyframes slideUp {
@@ -55,14 +57,20 @@ body {
 
 
 .parallax-nav {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    /* bottom: 1rem; */
+    margin-left: 50%;
     transform: translateX(-50%);
     padding: 10px;
     text-align: center;
     width: 100%;
+    background-color: #181A1B;
+    z-index: 1;
 }
+
+
 
 .parallax-nav nav a:nth-child(1) {
     animation: fade 0.75s ease forwards;
