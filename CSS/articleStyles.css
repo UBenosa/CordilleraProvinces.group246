@@ -1,12 +1,15 @@
 * {
     cursor: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: #1a2228;
+    background: #181A1B;
 }
 
 /* Parallax Container */
@@ -68,7 +71,43 @@ body {
     margin-left: 20vw;
     margin-right: 20vw;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: 1.8em;
     line-height: 1.5em;
     text-indent: 3em;
+
+    /* Experimental */
+    animation: fade linear both, reveal both linear;
+    animation-timeline: view();
+    animation-range: entry 35% cover 35%;
+
+    /* Gradient Effect */
+    background: linear-gradient(90deg, white, transparent);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.article .linebreak {
+    font-size: 6rem;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    } 60% {
+        transform: translateY(50px);
+    } 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        background-position-x: 200%;
+    } 100% {
+        background-position-x: 0%;
+    }
 }
