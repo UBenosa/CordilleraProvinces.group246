@@ -60,6 +60,7 @@ body {
 
 .image-container:hover .image {
     transform: scale(1.65);
+    filter: brightness(0.3);
 }
 
 .image-container .image {
@@ -73,15 +74,11 @@ body {
     backface-visibility: hidden;
 }
 
-.hover-effect:hover {
+.image-container:hover {
     transform: scale(1.05);
 }
 
-.hover-effect:hover .image {
-    filter: brightness(0.3);
-}
-
-.hover-effect:hover .text {
+.image-container:hover .text {
     opacity: 1;
 }
 
