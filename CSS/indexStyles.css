@@ -59,7 +59,7 @@ body {
 }
 
 .image-container:hover .image {
-    transform: scale(1.3);
+    transform: scale(1.65);
 }
 
 .image-container .image {
@@ -74,7 +74,7 @@ body {
 }
 
 .hover-effect:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .hover-effect:hover .image {
