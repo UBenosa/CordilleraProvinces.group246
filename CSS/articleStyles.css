@@ -39,13 +39,14 @@ body {
 .parallax-nav a {
     text-decoration: none;
     color: #fff;
-    margin-right: 2em;
+    margin: 1em;
     transition: 0.3s ease;
     font-size: 1.3rem;
 }
 
 .parallax-nav a:hover {
-    color: #585858;
+    font-size: 1.5rem;
+    margin: 0.8rem;
 }
 
 .article {
@@ -54,8 +55,9 @@ body {
 
 /* Article title */
 .article h2 {
-    padding: 20px;
+    padding: 0.8em;
     text-align: center;
+    font-size: 2em;
 }
 
 /* Article content */
@@ -68,4 +70,5 @@ body {
     justify-content: center;
     font-size: 1.2em;
     line-height: 1.5em;
+    text-indent: 3em;
 }
