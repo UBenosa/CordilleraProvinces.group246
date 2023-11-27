@@ -9,7 +9,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background: black;
     margin: 0rem;
     overflow: hidden;
 }
