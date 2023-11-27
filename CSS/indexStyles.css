@@ -1,3 +1,7 @@
+* {
+    cursor: none;
+}
+
 :root {
     --translateX: 0%;
 }
@@ -7,7 +11,6 @@ body {
     width: 100vw;
     background-color: black;
     margin: 0rem;
-    cursor: none;
     overflow: hidden;
 }
 
@@ -67,39 +70,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.5s ease;
-}
-
-/* for cursor animation */
-.cursor {
-    pointer-events: none;
-    position: fixed;
-    display: block;
-    border-radius: 0;
-    mix-blend-mode: difference;
-    top: 0;
-    left: 0;
-    z-index: 9999999999999999;
-}
-
-.circle {
-    position: absolute;
-    display: block;
-    width: 26px;
-    height: 26px;
-    border-radius: 20px;
-    background-color: #fff;
-    opacity: 20%;
-    box-shadow: 0px 0px 0px 5px #fff;
-}
-
-#line {
-    border-left: 2px solid red;
-    height: 100vh;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .image-container.darken {
