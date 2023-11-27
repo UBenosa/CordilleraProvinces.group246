@@ -22,20 +22,31 @@ body {
 .parallax-container {
     position: relative;
     height: 100vh;
+    max-height: 100vh;
     /* overflow: hidden; */
     color: #fff; /* Text color on top of the image */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    backface-visibility: hidden;
+    animation: moveUp 1s ease forwards;
+}
+
+@keyframes moveUp {
+    to {
+        height: 90vh;
+        max-height: 90vh;
+    }
 }
 
 /* Parallax Text */
 .parallax-text {
     font-size: 2em;
-    animation: slideUp 0.8s ease forwards;
+    animation: slideUp 1s ease forwards, fade 1s ease forwards;
     position: absolute;
     width: 50%;
+    opacity: 0;
 }
 
 @keyframes slideUp {
@@ -59,8 +70,7 @@ body {
 .parallax-nav {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    /* bottom: 1rem; */
+    top: 0px;
     margin-left: 50%;
     transform: translateX(-50%);
     padding: 25px;
@@ -70,22 +80,20 @@ body {
     z-index: 1;
 }
 
-
-
 .parallax-nav nav a:nth-child(1) {
-    animation: fade 0.75s ease forwards;
+    animation: fade 0.75s ease 0.4s forwards;
 }
 
 .parallax-nav a:nth-child(2) {
-    animation: fade 0.75s ease 0.3s forwards;
+    animation: fade 0.75s ease 0.7s forwards;
 }
 
 .parallax-nav a:nth-child(3) {
-    animation: fade 0.75s ease 0.6s forwards;
+    animation: fade 0.75s ease 0.9s forwards;
 }
 
 .parallax-nav a:nth-child(4) {
-    animation: fade 0.75s ease 0.9s forwards;
+    animation: fade 0.75s ease 1.3s forwards;
 }
 
 
@@ -99,9 +107,12 @@ body {
 }
 
 .parallax-nav a:hover {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem;
     margin: 0.8rem;
+    opacity: 0; */
+    animation: tilt-shaking 0.25s infinite;
 }
+
 
 .article {
     color: #fff;
@@ -129,21 +140,23 @@ body {
     line-height: 1.5em;
     text-indent: 3em;
 
-    /* Experimental Animation */
-    animation: fade linear both, gradientReveal ease both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%;
-
-    background: linear-gradient(90deg, white 0%, white 25%, transparent 100%);
-    background-size: 200%;
-    background-repeat: no-repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-
     /* Scroll Snap */
     scroll-snap-align: center;
     
+}
+
+.article p, .article h2 {
+     /* Experimental Animation */
+     animation: fade linear both, gradientReveal ease both;
+     animation-timeline: view();
+     animation-range: entry 50% cover 50%;
+ 
+     background: linear-gradient(90deg, white 0%, white 25%, transparent 100%);
+     background-size: 200%;
+     background-repeat: no-repeat;
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
 }
 
 .article .linebreak {
@@ -168,3 +181,11 @@ body {
         background-position-x: 0%;
     }
 }
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); opacity: 1; }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); opacity: 1;}
+  }
