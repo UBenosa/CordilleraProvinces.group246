@@ -23,7 +23,7 @@ body {
     position: relative;
     height: 100vh;
     max-height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
     color: #fff; /* Text color on top of the image */
     text-align: center;
     display: flex;
@@ -79,22 +79,22 @@ body {
     background-color: rgb(4, 4, 4);
     z-index: 1;
 }
-/* 
-.parallax-nav nav a:nth-child(1) {
+
+.article-link:nth-child(1) a {
     animation: fade 0.75s ease 0.4s forwards;
 }
 
-.parallax-nav a:nth-child(2) {
+.article-link:nth-child(2) a {
     animation: fade 0.75s ease 0.7s forwards;
 }
 
-.parallax-nav a:nth-child(3) {
+.article-link:nth-child(3) a {
     animation: fade 0.75s ease 0.9s forwards;
 }
 
-.parallax-nav a:nth-child(4) {
+.article-link:nth-child(4) a {
     animation: fade 0.75s ease 1.3s forwards;
-} */
+}
 
 
 .parallax-nav .article-link, .article-link a {
@@ -102,15 +102,18 @@ body {
     text-decoration: none;
     color: #fff;
     margin: 0.5em;
-    /* transition: 0.3s ease; */
     font-size: 1.5rem;
-    /* opacity: 0; */
+}
+
+.article-link a {
+    transition: 0.3s ease;
+    opacity: 0;
 }
 
 .parallax-nav .article-link:hover {
-    /* font-size: 1.8rem;
+    font-size: 1.8rem;
     margin: 0.8rem;
-    opacity: 0; */
+    opacity: 1;
     animation: tilt-shaking 0.25s infinite;
     color:red;
 }
