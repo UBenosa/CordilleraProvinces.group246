@@ -85,7 +85,7 @@ window.onwheel = e => handleOnScroll(e);
 function zoomImage(containerId) {
     const imageContainers = document.querySelectorAll(".image-container");
     const imageMap = {
-        abra: "Abra/abra.html",
+        abra: "HTML/abra.html",
         apayao: "Images/Apayao.jpg",
         benguet: "Images/Benguet.jpg",
         ifugao: "Images/Ifugao.jpg",
