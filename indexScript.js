@@ -124,7 +124,7 @@ animateCircles();
 function zoomImage(containerId) {
     const imageContainers = document.querySelectorAll(".image-container");
     const imageMap = {
-        abra: "Images/Abra.jpg",
+        abra: "Abra/Abra.html",
         apayao: "Images/Apayao.jpg",
         benguet: "Images/Benguet.jpg",
         ifugao: "Images/Ifugao.jpg",
