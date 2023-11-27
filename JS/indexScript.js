@@ -1,9 +1,9 @@
-r = document.querySelector(':root');
+r = document.querySelector(':root').style;
 
 // Mouse drag handler
 const track = document.getElementById("image-track");
 const translateX = 8.5
-r.style.setProperty('--translateX', `${-translateX}%`);
+r.setProperty('--translateX', `${-translateX}%`);
 const handleOnDown = e => {
     track.dataset.mouseDownAt = e.clientX;
 };
@@ -92,15 +92,12 @@ function zoomImage(containerId) {
         kalinga: "Images/Kalinga.jpg",
         "mountain-province": "Images/Mountain Province.jpg",
     };
-    
-    document.getElementById('header').classList.add("darken");
-    document.getElementById('scrollbar-track').classList.add("darken");
+
+    document.getElementById('overlay').classList.add('fade');
 
     imageContainers.forEach((container) => {
         const id = container.getAttribute("id");
-        container.classList.add("darken");
-        const text = container.querySelector(".text");
-        text.classList.add("zoom");
+        // r.setProperty('--image', imageMap[id]);
         container.addEventListener("click", () => {
         window.location.href = imageMap[id];
         });
