@@ -15,5 +15,15 @@ function toggleArticle(articleId) {
     
     // Show the selected article
     var article = document.getElementById(articleId);
+    var links = document.getElementsByTagName('a');
+    console.log(links[0].getAttribute('href'));
+    console.log(articleId);
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].getAttribute('href') == `#${articleId}`) {
+            links[i].style.fontSize = '1.9rem';
+        } else {
+            links[i].style.fontSize = '1.5rem';
+        }
+    }
     article.style.display = 'block';
 }
