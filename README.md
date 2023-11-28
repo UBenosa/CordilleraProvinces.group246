@@ -7,5 +7,6 @@
 - ~~Fix scroll wheel and drag interaction bug (can't drag anymore if scrolled first)~~
 - ~~Fix: scroll bar exceeding limit~~
 - ~~Format province article text~~
-- ~~Add home button~~
 - ~~Enhance website visibility (e.g., ~~scroll indicators~~, ~~effect on hover~~, etc.)~~
+- Add home or back button
+- Add image album
