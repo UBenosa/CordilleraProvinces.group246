@@ -21,8 +21,8 @@ body {
 /* Parallax Container */
 .parallax-container {
     position: relative;
-    height: 100vh;
-    max-height: 100vh;
+    height: 120vh;
+    max-height: 120vh;
     overflow: hidden;
     color: #fff; /* Text color on top of the image */
     text-align: center;
@@ -43,18 +43,10 @@ body {
 /* Parallax Text */
 .parallax-text {
     font-size: 2em;
-    animation: slideUp 1s ease .2s forwards, fade 1s ease .2s forwards;
+    animation: fade 1s ease .2s forwards;
     position: absolute;
     width: 50%;
     opacity: 0;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(-180);
-    } to {
-        transform: translateY(-80);
-    }
 }
 
 .parallax-text h1 {
