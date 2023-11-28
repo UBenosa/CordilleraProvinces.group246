@@ -12,8 +12,8 @@
 .circle {
     position: absolute;
     display: block;
-    width: 26px;
-    height: 26px;
+    width: 15px;
+    height: 15px;
     border-radius: 20px;
     background-color: #fff;
     opacity: 20%;

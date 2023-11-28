@@ -30,20 +30,20 @@ body {
     align-items: center;
     justify-content: center;
     backface-visibility: hidden;
-    animation: moveUp 1s ease forwards;
+    animation: moveUp 1s ease 0.2s forwards;
 }
 
 @keyframes moveUp {
     to {
-        height: 90vh;
-        max-height: 90vh;
+        height: 88vh;
+        max-height: 88vh;
     }
 }
 
 /* Parallax Text */
 .parallax-text {
     font-size: 2em;
-    animation: slideUp 1s ease forwards, fade 1s ease forwards;
+    animation: slideUp 1s ease .2s forwards, fade 1s ease .2s forwards;
     position: absolute;
     width: 50%;
     opacity: 0;
@@ -51,9 +51,9 @@ body {
 
 @keyframes slideUp {
     from {
-        transform: translateY(-200px);
+        transform: translateY(-180);
     } to {
-        transform: translateY(-60px);
+        transform: translateY(-80);
     }
 }
 
@@ -81,19 +81,19 @@ body {
 }
 
 .article-link:nth-child(1) a {
-    animation: fade 0.75s ease 0.4s forwards;
-}
-
-.article-link:nth-child(2) a {
-    animation: fade 0.75s ease 0.7s forwards;
-}
-
-.article-link:nth-child(3) a {
     animation: fade 0.75s ease 0.9s forwards;
 }
 
+.article-link:nth-child(2) a {
+    animation: fade 0.75s ease 1.2s forwards;
+}
+
+.article-link:nth-child(3) a {
+    animation: fade 0.75s ease 1.5s forwards;
+}
+
 .article-link:nth-child(4) a {
-    animation: fade 0.75s ease 1.3s forwards;
+    animation: fade 0.75s ease 1.8s forwards;
 }
 
 
