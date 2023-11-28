@@ -16,7 +16,7 @@
     cursor: none;
     user-select: none;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 150px;
 }
 
 body {
@@ -99,12 +99,16 @@ body {
     animation: fade 0.75s ease 1.8s forwards;
 }
 
+.article-link:nth-child(5) a {
+    animation: fade 0.75s ease 2.1s forwards;
+}
+
 
 .parallax-nav .article-link, .article-link a {
     display: inline-flex;
     text-decoration: none;
     color: #fff;
-    margin: 0.5em;
+    margin: 0.7em 1.2em 1.2em 1.2em;
     font-size: 1.5rem;
 }
 
@@ -115,7 +119,7 @@ body {
 
 .parallax-nav .article-link:hover {
     font-size: 1.8rem;
-    margin: 0.8rem;
+    margin: 0.7em 1em 1.2em 1em;
     opacity: 1;
     animation: tilt-shaking 0.35s infinite;
     color:red;
@@ -177,6 +181,7 @@ body {
 .article .author {
     text-indent: 0; 
     filter:brightness(0.5);
+    font-size: 1.5em;
 }
 
 .article .linebreak {
