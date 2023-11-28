@@ -149,6 +149,10 @@ body {
     
 }
 
+.article h3 {
+    color: gray;
+}
+
 .article p, .article h2 {
      /* Experimental Animation */
      animation: fade linear both, gradientReveal linear both;
@@ -161,6 +165,10 @@ body {
      background-clip: text;
      -webkit-background-clip: text;
      color: transparent;
+}
+
+.article .author {
+    text-indent: 0; color: gray;
 }
 
 .article .linebreak {
