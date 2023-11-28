@@ -26,18 +26,18 @@ body {
 }
 
 #overlay.fade {
-    animation: fadeOut 0.5s linear forwards;
+    animation: fadeOut 0.4s linear forwards;
 }
 
 @keyframes fadeOut {
     from {
         z-index: 10;
-        background: url('Images/Abra.jpg');
+        background: black;
         display: block;
         opacity: 0;
     }
     to {
-        /* background-color: black; */
+        background-color: black;
         opacity: 1;
         
     }

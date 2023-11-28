@@ -16,8 +16,6 @@ function toggleArticle(articleId) {
     // Show the selected article
     var article = document.getElementById(articleId);
     var links = document.getElementsByTagName('a');
-    console.log(links[0].getAttribute('href'));
-    console.log(articleId);
     for (var i = 0; i < links.length; i++) {
         if (links[i].getAttribute('href') == `#${articleId}`) {
             links[i].style.fontSize = '1.9rem';
@@ -27,3 +25,9 @@ function toggleArticle(articleId) {
     }
     article.style.display = 'block';
 }
+
+// Navigation bar animation with delay
+var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].style.animation = `fade 0.75s ease ${0.9+(0.3*i)}s forwards`;
+    }

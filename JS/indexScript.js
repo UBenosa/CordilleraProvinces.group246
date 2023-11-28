@@ -105,5 +105,5 @@ function zoomImage(containerId) {
     
     setTimeout(() => {
         window.location.href = imageMap[containerId];
-    }, 500);
+    }, 300);
 }

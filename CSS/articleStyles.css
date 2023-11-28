@@ -83,27 +83,6 @@ body {
     z-index: 1;
 }
 
-.article-link:nth-child(1) a {
-    animation: fade 0.75s ease 0.9s forwards;
-}
-
-.article-link:nth-child(2) a {
-    animation: fade 0.75s ease 1.2s forwards;
-}
-
-.article-link:nth-child(3) a {
-    animation: fade 0.75s ease 1.5s forwards;
-}
-
-.article-link:nth-child(4) a {
-    animation: fade 0.75s ease 1.8s forwards;
-}
-
-.article-link:nth-child(5) a {
-    animation: fade 0.75s ease 2.1s forwards;
-}
-
-
 .parallax-nav .article-link, .article-link a {
     display: inline-flex;
     text-decoration: none;
