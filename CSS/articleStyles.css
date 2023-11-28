@@ -96,25 +96,14 @@ body {
     opacity: 0;
 }
 
-.parallax-nav .article-link:hover {
-    font-size: 1.8rem;
-    margin: 0.7em 1em 1.2em 1em;
+.parallax-nav .article-link:hover a {
+    font-size: 1.9rem;
+    margin: 0.7em 0.7em 1.2em 0.7em;
     opacity: 1;
-    animation: tilt-shaking 0.35s infinite;
-    color:red;
 }
-
-@keyframes tilt-shaking {
-    0% { transform: rotate(0deg);}
-    25% { transform: rotate(5deg);}
-    50% { transform: rotate(0deg);}
-    75% { transform: rotate(-5deg);}
-    100% { transform: rotate(0deg);}
-  }
 
 .article {
     color: #fff;
-
     /* Scroll Snap */
     scroll-snap-type: y mandatory; 
 }
