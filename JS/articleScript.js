@@ -26,12 +26,6 @@ function toggleArticle(articleId) {
     article.style.display = 'block';
 }
 
-// Navigation bar animation with delay
-var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].style.animation = `fade 0.75s ease ${0.9+(0.3*i)}s forwards`;
-    }
-
 // Carousel Script
 let slider = document.querySelector('.js-carousel');
 
