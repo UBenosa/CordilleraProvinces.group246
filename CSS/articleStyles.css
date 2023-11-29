@@ -74,7 +74,7 @@ body {
 
 /* Parallax Text */
 .parallax-text {
-    font-size: 2.7em;
+    font-size: 2.2vw;
     position: absolute;
     width: 50%;
     opacity: 0;
@@ -83,7 +83,7 @@ body {
 }
 
 .parallax-text h1 {
-    font-size: 3em;
+    font-size: 7vw;
     margin-bottom: 0;
 }
 

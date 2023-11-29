@@ -22,7 +22,7 @@ body {
     overflow: hidden;
     background: transparent;
     z-index: -1;
-    opacity: 1;
+    opacity: 0;
     display: block;
 }
 
@@ -112,7 +112,6 @@ body {
     background-color: #414141;
     margin: auto;
     width: 55%;
-    opacity: 20%;
     /* margin-top: 87vh; */
     position: absolute;
     transform: translateX(-50%);
@@ -128,6 +127,7 @@ body {
     background-color: #A0A0A0;
     position: relative;
     left: 0%;
+    opacity: 20%;
 }
 
 @keyframes scale-out {
