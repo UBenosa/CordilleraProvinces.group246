@@ -53,11 +53,13 @@ body {
 
 /* Parallax Text */
 .parallax-text {
-    font-size: 2em;
-    animation: fade 1s ease .2s forwards;
+    font-size: 2.7em;
+    animation: fade 1s ease forwards;
     position: absolute;
     width: 50%;
     opacity: 0;
+    transform: translateY(-25%);
+    text-shadow: 1px 1px 8px #181818;
 }
 
 .parallax-text h1 {
@@ -86,7 +88,7 @@ body {
 .parallax-nav .article-link, .article-link a {
     display: inline-flex;
     text-decoration: none;
-    color: #fff;
+    color: #E8E6E3;
     margin: 0.7em 1.2em 1.2em 1.2em;
     font-size: 1.5rem;
 }
@@ -103,7 +105,7 @@ body {
 }
 
 .article {
-    color: #fff;
+    color: #E8E6E3;
     /* Scroll Snap */
     scroll-snap-type: y mandatory; 
 }
@@ -285,7 +287,7 @@ body {
 }
 
 .image-container .text {
-    color: #fff;
+    color: #E8E6E3;
     opacity: 0;
     transition: 0.2s ease-in;
     font-size: 4rem;
