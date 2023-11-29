@@ -67,6 +67,7 @@ function animateImages(nextPercentage) {
     }
 }
 
+
 // Mouse Drag Event listeners
 window.onmousedown = e => handleOnDown(e);
 window.ontouchstart = e => handleOnDown(e.touches[0]);

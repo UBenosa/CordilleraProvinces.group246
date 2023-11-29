@@ -34,5 +34,6 @@ window.addEventListener("scroll", function (event) {
     console.log(scroll_percentage)
     
     document.getElementById('scrollbar').style.top = `${scroll_percentage}%`;
+    
 });
 
