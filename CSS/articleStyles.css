@@ -219,7 +219,7 @@ body {
     animation-timeline: view();
     animation-range: entry 45% cover 45%;
 
-    background: linear-gradient(90deg, white 0%, white 25%, transparent 100%);
+    background: linear-gradient(90deg, white 0%, white 40%, transparent 100%);
     background-size: 200%;
     background-repeat: no-repeat;
     background-clip: text;
