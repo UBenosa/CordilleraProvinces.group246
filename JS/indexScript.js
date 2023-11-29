@@ -21,7 +21,7 @@ const handleOnMove = e => {
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
     
     track.dataset.percentage = nextPercentage;
-
+    console.log(nextPercentage)
     animateImages(nextPercentage);
 };
 
@@ -93,17 +93,22 @@ function zoomImage(containerId) {
         "mountain-province": "Images/Mountain Province.jpg",
     };
 
-    document.getElementById('overlay').classList.add('fade');
+    // document.getElementById('overlay').classList.add('fade');
+    document.getElementById('image-track').style.overflow = 'visible';
+    current_container = document.getElementById(containerId)
+    current_container.style.animation = 'scaleOut 1s ease forwards';
+    current_container.getElementsByClassName('image')[0].style.transform = 'scale(1)';
+    current_container.classList.remove('hover-effect');
+
 
     imageContainers.forEach((container) => {
         const id = container.getAttribute("id");
-        // r.setProperty('--image', imageMap[id]);
         container.addEventListener("click", () => {
-        window.location.href = imageMap[id];
+            window.location.href = imageMap[id];
         });
     });
     
     setTimeout(() => {
         window.location.href = imageMap[containerId];
-    }, 300);
+    }, 1000);
 }

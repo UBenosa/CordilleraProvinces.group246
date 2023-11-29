@@ -63,10 +63,6 @@ body {
     overflow: hidden;
 }
 
-.image-container:hover .image {
-    transform: scale(1.65);
-    filter: brightness(0.3);
-}
 
 .image-container .image {
     background-attachment: fixed;
@@ -83,8 +79,13 @@ body {
     transform: scale(1.05);
 }
 
-.image-container:hover .text {
+.hover-effect:hover .text {
     opacity: 1;
+}
+
+.hover-effect:hover .image {
+    transform: scale(1.65);
+    filter: brightness(0.3);
 }
 
 .image-container .text {
@@ -121,6 +122,7 @@ body {
     transform: translateX(-50%);
     bottom: 25px;
     left: 50%;
+    z-index: -1;
 }
 
 #scrollbar-thumb {
@@ -130,4 +132,15 @@ body {
     background-color: #A0A0A0;
     position: relative;
     left: 0%;
+}
+
+@keyframes scaleOut {
+    from {
+        max-height: 200vh;
+        max-width: 200vw;
+    }
+    to {
+        width: 200vw;
+        height: 200vh;
+    }
 }
