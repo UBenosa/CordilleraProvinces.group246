@@ -26,14 +26,28 @@ function toggleArticle(articleId) {
     article.style.display = 'block';
 }
 
-// Carousel Script
-let slider = document.querySelector('.js-carousel');
+// Scrollbar
+const scrollbar = document.getElementById('scrollbar');
+let prevPercentage;
+let scrollPercentage;
 
-        lory(slider, {
-            infinite: 1,
-            enableMouseEvents: true,
-            classNameFrame: 'js-carousel__frame',
-            classNameSlideContainer: 'js-carousel__slides',
-            classNamePrevCtrl: 'js-carousel__prev',
-            classNameNextCtrl: 'js-carousel__next',
-        });
+const handleOnScroll = e => {
+    const scrollDelta = e.deltaY;
+    const maxDelta = window.innerHeight / 2;
+    prevPercentage = scrollPercentage || "0";
+    const percentage = (scrollDelta / maxDelta) * -100;
+    const nextPercentageUnconstrained = parseFloat(prevPercentage) + percentage;
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    
+    scrollPercentage = nextPercentage;
+
+    scrollbar.animate(
+        {
+            transform: `translateY(${-nextPercentage}%`,
+        },
+        { duration: 900, fill: "both", easing: "ease-out" }
+    );
+};
+
+window.onwheel = e => handleOnScroll(e);
+

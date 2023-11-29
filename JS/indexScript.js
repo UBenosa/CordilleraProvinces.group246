@@ -21,7 +21,6 @@ const handleOnMove = e => {
     const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
     
     track.dataset.percentage = nextPercentage;
-    console.log(nextPercentage)
     animateImages(nextPercentage);
 };
 

@@ -37,6 +37,14 @@ a {
     text-decoration: none;
 }
 
+#scroll-bar {
+    width: 3px;
+    height: 100px;
+    position: fixed;
+    background: white;
+    z-index: 2;
+}
+
 body {
     margin: 0;
     padding: 0;
