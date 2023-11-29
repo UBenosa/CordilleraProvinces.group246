@@ -18,7 +18,7 @@ function toggleArticle(articleId) {
     var links = document.getElementsByTagName('a');
     for (var i = 0; i < links.length; i++) {
         if (links[i].getAttribute('href') == `#${articleId}`) {
-            links[i].style.fontSize = '1.9rem';
+            links[i].style.fontSize = '1.7rem';
         } else {
             links[i].style.fontSize = '1.5rem';
         }
