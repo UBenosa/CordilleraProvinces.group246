@@ -214,7 +214,7 @@ body {
 .article .author,
 .article img {
     /* Experimental Animation */
-    animation: fade linear both, gradient linear both, reveal linear both;
+    animation: fade linear both, gradient linear both, reveal cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
     animation-timeline: view();
     animation-range: entry 45% cover 45%;
 
@@ -232,7 +232,11 @@ body {
     display: block;
     margin: auto;
     object-fit: cover;
+    transition: 0.3s ease;
+}
 
+.article img:hover {
+    filter: opacity(0.5);
 }
 
 .article .author {
@@ -245,7 +249,7 @@ body {
 }
 
 .article .linebreak {
-    font-size: 6rem;
+    font-size: 7rem;
 }
 
 .article .references p {
@@ -279,7 +283,7 @@ body {
 
 @keyframes reveal {
     60% {
-        transform: translateY(60px);
+        transform: translateY(120px);
     }
 }
 
@@ -315,7 +319,7 @@ body {
     color: #e8e6e3;
     opacity: 0;
     transition: 0.2s ease-in;
-    font-size: 4rem;
+    font-size: 3rem;
     transform: translateY(-480px);
 }
 
