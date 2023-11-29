@@ -71,6 +71,32 @@ body {
     font-style: italic;
 }
 
+.header-button {
+    padding: 25px 35px 25px 35px;
+    position: absolute;
+    top: 90%;
+    left: 93%;
+    transform: translateY(-50%);
+    border: none;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #7E7D80;
+    background-size: 150%;
+    border-radius: 500px 500px;
+    transform: scale(0.7) rotate(-90deg);
+    transition: 0.6s ease;
+}
+
+.header-button:hover {
+    border: 1px solid #7E7D80;
+}
+
+.header-button img {
+    width: 18px;
+    height: auto;
+    filter: invert(1);
+}
+
 
 .parallax-nav {
     position: -webkit-sticky;
