@@ -116,3 +116,21 @@ function zoomImage(containerId) {
         window.location.href = imageMap[containerId];
     }, 300);
 }
+
+// Fade in transition
+window.addEventListener('load', function() {
+    const webpageElement = document.querySelector('body');
+
+    webpageElement.style.opacity = 0;
+    let opacity = 0;
+
+    function fadeIn() {
+        if (opacity < 1) {
+        opacity += 0.01; // Adjust the increment value as per your preference
+        webpageElement.style.opacity = opacity;
+        requestAnimationFrame(fadeIn);
+        }
+    }
+
+    fadeIn();
+});

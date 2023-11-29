@@ -1,5 +1,6 @@
 * {
     cursor: none;
+    font-family: Helvetica, sans-serif;
 }
 
 :root {
@@ -110,6 +111,7 @@ body {
     background-color: #414141;
     margin: auto;
     width: 55%;
+    opacity: 20%;
     /* margin-top: 87vh; */
     position: absolute;
     transform: translateX(-50%);
