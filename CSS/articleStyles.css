@@ -244,3 +244,29 @@ body {
 .carousel__next {
     right: 0rem;
 }
+
+#images {
+    text-align: center;
+}
+
+#images section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 1200px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.image {
+    transition: 0.3s ease;
+}
+
+.image-container:hover .image {
+    transform: scale(0.8);
+}
