@@ -1,8 +1,8 @@
 ::-webkit-scrollbar {
-    width: 10px;
+    display: none;
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background-color: #414141;
 }
 
@@ -10,7 +10,7 @@
     background-color: #A0A0A0;
     border-radius: 20px;
     opacity: 50%;
-}
+} */
 
 * {
     -webkit-user-drag: none;
@@ -237,10 +237,17 @@ body {
     border: none;
     color: #fff;
     background: transparent;
+    border: 5px solid #7E7D80;
+    border-radius: 75%;
+    transform: scale(0.5);
 }
 
 .carousel__prev {
-    left: 0em;
+    left: 0.5em;
+}
+
+.carousel__next {
+    right: 0.5rem;
 }
 
 .carousel__frame button img {
@@ -253,9 +260,7 @@ body {
     transform: scale(1.5);
 }
 
-.carousel__next {
-    right: 0rem;
-}
+
 
 #images {
     text-align: center;
