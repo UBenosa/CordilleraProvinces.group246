@@ -78,9 +78,6 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 window.onwheel = e => handleOnScroll(e);
 
 
-// For cursor animation
-
-
 // Transition
 function zoomImage(containerId) {
     const imageContainers = document.querySelectorAll(".image-container");
@@ -92,13 +89,19 @@ function zoomImage(containerId) {
         kalinga: "Images/Kalinga.jpg",
         "mountain-province": "Images/Mountain Province.jpg",
     };
-
-    // document.getElementById('overlay').classList.add('fade');
+    overlay = document.getElementById('overlay').style;
+    overlay.background = 'black';
+    overlay.animation = 'fadeOut 0.5s linear forwards';
     document.getElementById('image-track').style.overflow = 'visible';
-    current_container = document.getElementById(containerId)
-    current_container.style.animation = 'scaleOut 1s ease forwards';
-    current_container.getElementsByClassName('image')[0].style.transform = 'scale(1)';
+    current_container = document.getElementById(containerId);
     current_container.classList.remove('hover-effect');
+    current_container.style.animation = 'scale-out 0.5s ease forwards';
+
+    not_current = document.querySelectorAll(`.image-container:not(#${containerId})`);
+    not_current.forEach((not_container) => {
+        not_container.style.animation = 'shift-down 0.5s ease forwards';
+    })
+
 
 
     imageContainers.forEach((container) => {
@@ -107,8 +110,9 @@ function zoomImage(containerId) {
             window.location.href = imageMap[id];
         });
     });
-    
+
+
     setTimeout(() => {
         window.location.href = imageMap[containerId];
-    }, 1000);
+    }, 300);
 }

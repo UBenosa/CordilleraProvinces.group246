@@ -25,21 +25,14 @@ body {
     display: block;
 }
 
-#overlay.fade {
-    animation: fadeOut 0.4s linear forwards;
-}
 
 @keyframes fadeOut {
     from {
         z-index: 10;
-        background: black;
-        display: block;
         opacity: 0;
     }
     to {
-        background-color: black;
         opacity: 1;
-        
     }
 }
 
@@ -134,13 +127,15 @@ body {
     left: 0%;
 }
 
-@keyframes scaleOut {
-    from {
-        max-height: 200vh;
-        max-width: 200vw;
-    }
+@keyframes scale-out {
     to {
-        width: 200vw;
-        height: 200vh;
+        width: 54vmin;
+        height: 70vmin;
+    }
+}
+
+@keyframes shift-down {
+    to {
+        transform: translateY(10%);
     }
 }

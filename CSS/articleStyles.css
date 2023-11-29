@@ -12,6 +12,27 @@
     scroll-snap-align: start;
 }
 
+#overlay {
+    position: absolute;
+    height: 100vh;
+    width: 200vh;
+    overflow: hidden;
+    background: black;
+    z-index: 11;
+    opacity: 1;
+    display: block;
+    animation: fade-out 0.5s ease forwards;
+}
+
+@keyframes fade-out {
+    to {
+        z-index: -1;
+        opacity: 0;
+        display: none;
+        background: transparent;
+    }
+}
+
 a {
     text-decoration: none;
 }
