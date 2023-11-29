@@ -10,4 +10,10 @@
 - ~~Enhance website visibility (e.g., ~~scroll indicators~~, ~~effect on hover~~, etc.)~~
 - ~~Add home or back button~~
 - ~~Add image album~~
+- ~~Add responsivity~~
+- ~~Article header~~
+- ~~Page transitions~~
+- ~~Images section~~
+- ~~Animation on scroll~~
+- Add the other articles
 - Add background effect
