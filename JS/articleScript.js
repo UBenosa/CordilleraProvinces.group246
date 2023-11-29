@@ -31,3 +31,15 @@ var links = document.getElementsByTagName('a');
     for (var i = 0; i < links.length; i++) {
         links[i].style.animation = `fade 0.75s ease ${0.9+(0.3*i)}s forwards`;
     }
+
+// Carousel Script
+let slider = document.querySelector('.js-carousel');
+
+        lory(slider, {
+            infinite: 1,
+            enableMouseEvents: true,
+            classNameFrame: 'js-carousel__frame',
+            classNameSlideContainer: 'js-carousel__slides',
+            classNamePrevCtrl: 'js-carousel__prev',
+            classNameNextCtrl: 'js-carousel__next',
+        });

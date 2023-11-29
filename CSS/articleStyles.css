@@ -17,6 +17,9 @@
     user-select: none;
     scroll-behavior: smooth;
     scroll-padding-top: 150px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -173,4 +176,61 @@ body {
     100% {
         background-position-x: 0%;
     }
+}
+
+/* Carousel */
+
+.centered {
+    transform: translateX(20%);
+}
+
+.carousel__frame {
+    /* border: 1px solid #f00; */
+    width: 60%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* // background-size: cover; */
+    /* // display: table; */
+}
+
+.carousel__slides {
+    display: block;
+}
+
+.carousel__item {
+    width: 100%;
+    /* // height: auto; */
+    position: relative;
+    display: inline-block;
+}
+
+.carousel button {
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: #fff;
+    background: transparent;
+}
+.carousel__prev {
+    left: 0em;
+}
+
+.carousel__prev img, .carousel__next img {
+    width: 16px;
+    height: auto;
+    filter: invert(1);
+}
+
+.carousel__next {
+    right: 0rem;
 }
