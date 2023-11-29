@@ -8,5 +8,6 @@
 - ~~Fix: scroll bar exceeding limit~~
 - ~~Format province article text~~
 - ~~Enhance website visibility (e.g., ~~scroll indicators~~, ~~effect on hover~~, etc.)~~
-- Add home or back button
-- Add image album
+- ~~Add home or back button~~
+- ~~Add image album~~
+- Add background effect
