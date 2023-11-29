@@ -200,11 +200,9 @@ body {
 /* Article content */
 .article p {
     text-align: left;
-    display: flex;
-    align-items: center;
+    display: block;
     margin-left: 20vw;
     margin-right: 20vw;
-    justify-content: center;
     font-size: 2em;
     line-height: 1.5em;
     text-indent: 3em;
@@ -228,14 +226,31 @@ body {
 }
 
 .article .author {
-    text-indent: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     filter: brightness(0.5);
     font-size: 1.8em;
+    text-indent: 0;
 }
 
 .article .linebreak {
     font-size: 6rem;
 }
+
+.article .references p {
+    text-indent: 0;
+    text-decoration: underline;
+}
+
+.references {
+    transition: 0.5s ease;
+}
+
+.references:hover {
+    opacity: 0.5;
+}
+
 
 @keyframes fade {
     from {
