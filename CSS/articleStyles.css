@@ -73,8 +73,8 @@ body {
 .header-button {
     padding: 25px 35px 25px 35px;
     position: absolute;
-    top: 90%;
-    left: 94%;
+    top: 90vh;
+    left: 94vw;
     transform: translateY(-50%);
     border: none;
     color: #fff;
@@ -97,24 +97,34 @@ body {
 }
 
 .scroll-text p {
-    top: 92%;
-    left: 50%;
+    top: 92vh;
+    left: 50vw;
     transform: translateX(-50%);
 }
 
 .back-text p {
     position: fixed;
-    top: 1.5%;
-    left: 2%;
+    top: 1.5vh;
+    left: 2vw;
     z-index: 10;
 }
 
+.page-number p {
+    top: 1.5%;
+    text-shadow: none;
+    left: 95vw;
+    font-size: 1.2rem;
+}  
+
+
 .header-button:hover {
-    opacity: 0.5;
+    filter: opacity(0.5);
 }
 
-.header p:hover {
-    opacity: 0.5;
+
+
+.header:not(.header.page-number) p:hover {
+    filter: opacity(0.5);
 }
 
 .header-button img {
@@ -288,7 +298,7 @@ body {
     border: none;
     color: #fff;
     background: transparent;
-    border: 5px solid #7e7d80;
+    border: 5px solid #2b2b2b;
     border-radius: 75%;
     transform: scale(0.5);
 }
@@ -341,7 +351,7 @@ body {
 
 .image-container .text {
     color: #e8e6e3;
-    opacity: 1;
+    opacity: 0;
     transition: 0.2s ease-in;
     font-size: 4rem;
     transform: translateY(-480px);
