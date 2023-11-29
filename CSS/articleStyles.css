@@ -32,8 +32,8 @@ body {
 /* Parallax Container */
 .parallax-container {
     position: relative;
-    height: 120vh;
-    max-height: 120vh;
+    height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
     color: #fff; /* Text color on top of the image */
     text-align: center;
@@ -41,7 +41,7 @@ body {
     align-items: center;
     justify-content: center;
     backface-visibility: hidden;
-    animation: moveUp 1s ease 0.2s forwards;
+    /* animation: moveUp 1s ease 0.2s forwards; */
 }
 
 @keyframes moveUp {
@@ -262,7 +262,7 @@ body {
 #images section {
     display: flex;
     flex-wrap: wrap;
-    gap: 7vmin;
+    gap: 5vmin;
     align-items: center;
     justify-content: center;
 }
@@ -275,8 +275,24 @@ body {
     animation-timeline: view();
     animation-range: entry 45% cover 45%;
     transition: 0.2s ease-in;
+    opacity: 1;
 }
+
 
 .image-container:hover img {
     transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.image-container .text {
+    color: #fff;
+    opacity: 0;
+    transition: 0.2s ease-in;
+    font-size: 4rem;
+    transform: translateY(-480px);
+}
+
+.image-container:hover .text {
+    transform: scale(1.1) translateY(-480px);
+    opacity: 1;
 }
