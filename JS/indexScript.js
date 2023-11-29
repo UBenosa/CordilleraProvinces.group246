@@ -90,7 +90,7 @@ function zoomImage(containerId) {
     };
     overlay = document.getElementById('overlay').style;
     overlay.background = 'black';
-    overlay.animation = 'fadeOut 0.5s linear forwards';
+    overlay.animation = 'fadeOut 0.2s linear forwards';
     document.getElementById('image-track').style.overflow = 'visible';
     current_container = document.getElementById(containerId);
     current_container.classList.remove('hover-effect');
@@ -100,8 +100,6 @@ function zoomImage(containerId) {
     not_current.forEach((not_container) => {
         not_container.style.animation = 'shift-down 0.5s ease forwards';
     })
-
-
 
     imageContainers.forEach((container) => {
         const id = container.getAttribute("id");
@@ -125,7 +123,7 @@ window.addEventListener('load', function() {
 
     function fadeIn() {
         if (opacity < 1) {
-        opacity += 0.01; // Adjust the increment value as per your preference
+        opacity += 0.02; // Adjust the increment value as per your preference
         webpageElement.style.opacity = opacity;
         requestAnimationFrame(fadeIn);
         }
