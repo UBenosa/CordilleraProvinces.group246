@@ -83,11 +83,11 @@ function zoomImage(containerId) {
     const imageContainers = document.querySelectorAll(".image-container");
     const imageMap = {
         abra: "HTML/abra.html",
-        apayao: "Images/Apayao.jpg",
-        benguet: "Images/Benguet.jpg",
-        ifugao: "Images/Ifugao.jpg",
-        kalinga: "Images/Kalinga.jpg",
-        "mountain-province": "Images/Mountain Province.jpg",
+        apayao: "Images/Provinces/Apayao.jpg",
+        benguet: "Images/Provinces/Benguet.jpg",
+        ifugao: "Images/Provinces/Ifugao.jpg",
+        kalinga: "Images/Provinces/Kalinga.jpg",
+        "mountain-province": "Images/Provinces/Mountain Province.jpg",
     };
     overlay = document.getElementById('overlay').style;
     overlay.background = 'black';

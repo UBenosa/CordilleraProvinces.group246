@@ -211,7 +211,8 @@ body {
 
 .article p,
 .article h2,
-.article .author {
+.article .author,
+.article img {
     /* Experimental Animation */
     animation: fade linear both, gradient linear both, reveal linear both;
     animation-timeline: view();
@@ -223,6 +224,15 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.article img {
+    width: 1000px;
+    height: 700px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+
 }
 
 .article .author {
@@ -240,15 +250,12 @@ body {
 
 .article .references p {
     text-indent: 0;
-    text-decoration: underline;
-}
-
-.references {
     transition: 0.5s ease;
+    font-size: 2rem;
 }
 
-.references:hover {
-    opacity: 0.5;
+.references p:hover {
+    filter: opacity(0.5);
 }
 
 
@@ -276,85 +283,6 @@ body {
     }
 }
 
-/* Carousel */
-
-.centered {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.carousel__frame {
-    /* border: 1px solid #f00; */
-    width: 1000px;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: 0.3s ease-in;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: 0.3s ease;
-    /* // background-size: cover; */
-    /* // display: table; */
-}
-
-.carousel__slides {
-    display: block;
-}
-
-.carousel__frame:hover {
-    transform: scale(1.06);
-}
-
-.carousel__slides img {
-    width: 1000px;
-    height: 700px;
-}
-
-.carousel__item {
-    position: relative;
-    display: inline-block;
-}
-
-.carousel button {
-    padding: 25px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    color: #fff;
-    background: transparent;
-    border: 5px solid #fff;
-    border-radius: 75%;
-    transform: scale(0.5);
-}
-
-.carousel__prev {
-    left: 0.5em;
-}
-
-.carousel__next {
-    right: 0.5rem;
-}
-
-.carousel__frame button img {
-    width: 24px;
-    height: auto;
-    filter: invert(1);
-}
-
-.carousel__frame button:hover img {
-    transform: scale(1.5);
-}
-
 #images {
     text-align: center;
 }
@@ -362,7 +290,7 @@ body {
 #images section {
     display: flex;
     flex-wrap: wrap;
-    gap: 5vmin;
+    gap: 2vmin;
     align-items: center;
     justify-content: center;
 }
