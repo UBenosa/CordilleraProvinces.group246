@@ -134,9 +134,9 @@ body {
 
 .article p, .article h2, .article .author {
      /* Experimental Animation */
-     animation: fade linear both, gradientReveal linear both;
+     animation: fade linear both, gradient linear both, reveal linear both;
      animation-timeline: view();
-     animation-range: entry 50% cover 50%;
+     animation-range: entry 45% cover 45%;
  
      background: linear-gradient(90deg, white 0%, white 25%, transparent 100%);
      background-size: 200%;
@@ -164,15 +164,19 @@ body {
     }
 }
 
-@keyframes gradientReveal {
+@keyframes gradient {
     0% {
         background-position-x: 200%;
-    } 60% {
-        transform: translateY(100px);
     } 
     100% {
         background-position-x: 0%;
     }
+}
+
+@keyframes reveal {
+    60% {
+        transform: translateY(100px);
+    } 
 }
 
 /* Carousel */
@@ -193,7 +197,7 @@ body {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in;
 }
 
 .carousel img {
@@ -224,7 +228,7 @@ body {
 }
 
 .carousel button {
-    padding: 50px;
+    padding: 25px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -238,7 +242,7 @@ body {
 }
 
 .carousel__frame button img {
-    width: 16px;
+    width: 24px;
     height: auto;
     filter: invert(1);
 }
@@ -258,7 +262,7 @@ body {
 #images section {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 7vmin;
     align-items: center;
     justify-content: center;
 }
@@ -267,12 +271,12 @@ body {
     width: 1000px;
     height: 700px;
     object-fit: cover;
+    animation: fade ease-in both;
+    animation-timeline: view();
+    animation-range: entry 45% cover 45%;
+    transition: 0.2s ease-in;
 }
 
-.image {
-    transition: 0.3s ease;
-}
-
-.image-container:hover .image {
-    transform: scale(0.8);
+.image-container:hover img {
+    transform: scale(1.1);
 }
