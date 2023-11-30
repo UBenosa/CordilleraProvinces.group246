@@ -8,7 +8,7 @@
     cursor: none;
     user-select: none;
     scroll-behavior: smooth;
-    scroll-padding-top: 150px;
+    scroll-padding-top: 130px;
     scroll-snap-align: start;
 }
 
