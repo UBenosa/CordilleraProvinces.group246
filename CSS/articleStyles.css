@@ -165,7 +165,7 @@ body {
     text-shadow: none;
     left: 93vw;
     font-size: 1.9rem;
-    text-shadow: 1px 1px 8px #0c0c0c;
+    text-shadow: 0.5px 0.5px 4px #0c0c0c;
     font-weight: bold;
 }  
 
