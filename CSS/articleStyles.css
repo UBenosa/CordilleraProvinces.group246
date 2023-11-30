@@ -209,6 +209,10 @@ body {
     font-size: 1.5rem;
 }
 
+.article-link.authors-nav a {
+    margin: 0.7em 1.5em 0.7em 1.5em;
+}
+
 .article-link a {
     transition: 0.3s ease;
     opacity: 1;
@@ -239,7 +243,6 @@ body {
     font-size: 2em;
     line-height: 1.5em;
     text-indent: 3em;
-    scroll-snap-align: start;
 }
 
 .article p,
@@ -314,7 +317,7 @@ body {
 
 @keyframes reveal {
     60% {
-        transform: translateY(120px);
+        transform: translateY(60px);
     }
 }
 
@@ -358,3 +361,15 @@ body {
     transform: scale(1.1) translateY(-420px);
     opacity: 1;
 }
+
+.article .author-profile p {
+    font-size: 2rem;
+    text-indent: 0;
+    line-height: 1em;
+    text-align: center;
+}
+
+.article .author-profile p:nth-child(1) {
+    font-size: 2.7rem;
+}
+
