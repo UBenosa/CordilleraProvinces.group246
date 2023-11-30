@@ -17,3 +17,5 @@
 - ~~Animation on scroll~~
 - ~~Add the other articles~~
 - ~~Add background effect~~
+
+# IT IS FINALLY DONE! (I THINK)

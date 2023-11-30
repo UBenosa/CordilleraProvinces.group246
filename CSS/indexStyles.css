@@ -29,7 +29,6 @@ body {
     display: block;
 }
 
-
 @keyframes fadeOut {
     from {
         opacity: 0;

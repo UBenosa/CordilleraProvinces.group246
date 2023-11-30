@@ -4,6 +4,7 @@
     display: block;
     border-radius: 0;
     mix-blend-mode: difference;
+    
     top: 0;
     left: 0;
     z-index: 9999999999999999;

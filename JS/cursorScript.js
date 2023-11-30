@@ -13,6 +13,7 @@ circles.forEach(function (circle, index) {
     circle.style.backgroundColor = "white";
 });
 
+
 function animateCircles() {
     let x = coords.x;
     let y = coords.y;

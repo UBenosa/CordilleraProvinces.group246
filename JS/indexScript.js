@@ -24,6 +24,7 @@ const handleOnMove = e => {
     animateImages(nextPercentage);
 };
 
+
 // Scroll wheel handler
 const handleOnScroll = e => {
     const scrollDelta = e.deltaY;

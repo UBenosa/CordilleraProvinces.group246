@@ -26,6 +26,7 @@ function toggleArticle(articleId) {
     }
 }
 
+
 // Scrollbar
 window.addEventListener("scroll", function (event) {
     let scrollY = this.scrollY;

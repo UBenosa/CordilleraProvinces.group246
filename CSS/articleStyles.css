@@ -169,12 +169,9 @@ body {
     font-weight: bold;
 }  
 
-
 .header-button:hover {
     filter: opacity(0.5);
 }
-
-
 
 .header:not(.header.page-number) p:hover {
     filter: opacity(0.5);
