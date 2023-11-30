@@ -41,7 +41,7 @@ a {
     width: 0.4vmin;
     height: 100vh;
     position: fixed;
-    background: white;
+    background: #e8e6e3;
     z-index: 2;
     transform: translateY(-100%);
 }
@@ -61,7 +61,7 @@ body {
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    color: #fff; /* Text color on top of the image */
+    color: #e8e6e3; 
     text-align: center;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@ body {
     width: 50%;
     opacity: 0;
     transform: translateY(-25%);
-    text-shadow: 1px 1px 8px #0c0c0c;
+    text-shadow: 2px 2px 16px #0c0c0c;
 }
 
 .parallax-text h1 {
@@ -107,7 +107,7 @@ body {
     left: 94vw;
     transform: translateY(-50%);
     border: none;
-    color: #fff;
+    color: #e8e6e3;
     background: transparent;
     border: 2px solid #7e7d80;
     background-size: 150%;
@@ -136,7 +136,7 @@ body {
 }
 
 .header p {
-    color: #fff;
+    color: #e8e6e3;
     text-decoration: none;
     font-size: 1.5rem;
     text-shadow: 2px 2px 8px #0c0c0c;
@@ -149,6 +149,7 @@ body {
     top: 92vh;
     left: 50vw;
     transform: translateX(-50%);
+    text-shadow: 2px 2px 8px #0c0c0c;
 }
 
 .back-text p {
@@ -161,8 +162,10 @@ body {
 .page-number p {
     top: 2.5vh;
     text-shadow: none;
-    left: 94.5vw;
-    font-size: 1.5rem;
+    left: 93vw;
+    font-size: 1.9rem;
+    text-shadow: 1px 1px 8px #0c0c0c;
+    font-weight: bold;
 }  
 
 
@@ -246,7 +249,7 @@ body {
     animation-timeline: view();
     animation-range: entry 45% cover 45%;
 
-    background: linear-gradient(90deg, white 0%, white 40%, transparent 100%);
+    background: linear-gradient(90deg, #e8e6e3 0%, #e8e6e3 40%, transparent 100%);
     background-size: 200%;
     background-repeat: no-repeat;
     background-clip: text;
