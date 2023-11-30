@@ -6,47 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cordillera Heritage E-Blog</title>
   <link rel="icon" type="image/x-icon" href="Images/Icons/website.ico">
-  
+
   <link rel="stylesheet" href="CSS/cursorStyles.css" />
   <link rel="stylesheet" href="CSS/indexStyles.css" />
-  
+
 </head>
 
 <body>
-  <div id="overlay"></div>
-  <h1 id="header">Cordillera Heritage E-Blog</h1>
+  <div id="navbar">
+    <a href="#blog" onclick="navClick('#blog')">Blog</a>
+    <a href="#about" onclick="navClick('#about')">About</a>
+  </div>
   
-  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-    <div class="image-container hover-effect" id="abra" onClick="zoomImage(this.id)">
-      <img class="image" src="Images/Provinces/Abra.jpg" draggable="false">
-      <div class="text">Abra</div>
+  <div id="blog">
+    <div id="overlay"></div>
+    <h1 id="header">Cordillera Heritage E-Blog</h1>
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <div class="image-container hover-effect" id="abra" onClick="zoomImage(this.id)">
+        <img class="image" src="Images/Provinces/Abra.jpg" draggable="false">
+        <div class="text">Abra</div>
+      </div>
+      <div class="image-container hover-effect" id="apayao" onClick="zoomImage(this.id)">
+        <img class="image" src="Images/Provinces/Apayao.jpg" draggable="false">
+        <div class="text">Apayao</div>
+      </div>
+      <div class="image-container hover-effect" id="benguet" onClick="zoomImage(this.id)">
+        <img class="image" src="Images/Provinces/Benguet.jpg" draggable="false" />
+        <div class="text">Benguet</div>
+      </div>
+      <div class="image-container hover-effect" id="ifugao" onClick="zoomImage(this.id)">
+        <img class="image" src="Images/Provinces/Ifugao.jpg" draggable="false" />
+        <div class="text">Ifugao</div>
+      </div>
+      <div class="image-container hover-effect" id="kalinga" onClick="zoomImage(this.id)">
+        <img class="image" src="Images/Provinces/Kalinga.jpg" draggable="false" />
+        <div class="text">Kalinga</div>
+      </div>
+      <div class="image-container hover-effect" id="mountain-province" onClick="zoomImage(this.id)">
+        <img class="image" src="Images/Provinces/Mountain Province.jpg" draggable="false" style="height: 140%" />
+        <div class="text">Mountain Province</div>
+      </div>
     </div>
-    <div class="image-container hover-effect" id="apayao" onClick="zoomImage(this.id)">
-      <img class="image" src="Images/Provinces/Apayao.jpg" draggable="false">
-      <div class="text">Apayao</div>
-    </div>
-    <div class="image-container hover-effect" id="benguet" onClick="zoomImage(this.id)">
-      <img class="image" src="Images/Provinces/Benguet.jpg" draggable="false" />
-      <div class="text">Benguet</div>
-    </div>
-    <div class="image-container hover-effect" id="ifugao" onClick="zoomImage(this.id)">
-      <img class="image" src="Images/Provinces/Ifugao.jpg" draggable="false" />
-      <div class="text">Ifugao</div>
-    </div>
-    <div class="image-container hover-effect" id="kalinga" onClick="zoomImage(this.id)">
-      <img class="image" src="Images/Provinces/Kalinga.jpg" draggable="false" />
-      <div class="text">Kalinga</div>
-    </div>
-    <div class="image-container hover-effect" id="mountain-province" onClick="zoomImage(this.id)">
-      <img class="image" src="Images/Provinces/Mountain Province.jpg" draggable="false" style="height: 140%"/>
-      <div class="text">Mountain Province</div>
+    <div id="scrollbar-track">
+      <div id="scrollbar-thumb"></div>
     </div>
   </div>
-  <div id="scrollbar-track">
-    <div id="scrollbar-thumb"></div>
-  </div>
+  
 
-  
+
   <!-- for cursor animation -->
   <div class="cursor">
     <div class="circle"></div>

@@ -132,3 +132,20 @@ window.addEventListener('load', function() {
 
     fadeIn();
 });
+
+// About Us
+function navClick(Id) {
+    links = document.querySelectorAll('#navbar a');
+    overlay = document.querySelector('#overlay');
+    blog = document.querySelector("#blog");
+    blogLink = links[0];
+    aboutLink = links[1]
+
+    if (Id == '#about') {
+        blogLink.style.opacity = '0.5';
+        aboutLink.style.opacity = '1';
+    } else if (Id == '#blog') {
+        blogLink.style.opacity = '1';
+        aboutLink.style.opacity = '0.5';
+    }
+}
