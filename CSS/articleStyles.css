@@ -329,10 +329,10 @@ body {
     opacity: 0;
     transition: 0.2s ease-in;
     font-size: 3rem;
-    transform: translateY(-480px);
+    transform: translateY(-420px);
 }
 
 .image-container:hover .text {
-    transform: scale(1.1) translateY(-480px);
+    transform: scale(1.1) translateY(-420px);
     opacity: 1;
 }
