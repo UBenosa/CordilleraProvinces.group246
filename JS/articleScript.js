@@ -15,6 +15,8 @@ function toggleArticle(articleId) {
 
     // Show the selected article
     var article = document.getElementById(articleId);
+    article.style.display = "block";
+
     var links = document.getElementsByTagName("a");
     for (var i = 0; i < links.length; i++) {
         if (links[i].getAttribute("href") == `#${articleId}`) {
@@ -23,7 +25,6 @@ function toggleArticle(articleId) {
             links[i].style.fontSize = "1.5rem";
         }
     }
-    article.style.display = "block";
 }
 
 // Scrollbar

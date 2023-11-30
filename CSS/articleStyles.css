@@ -134,13 +134,13 @@ body {
 
 .back-text p {
     position: fixed;
-    top: 1.5vh;
+    top: 2.5vh;
     left: 2vw;
     z-index: 10;
 }
 
 .page-number p {
-    top: 1.5%;
+    top: 2.5vh;
     text-shadow: none;
     left: 94.5vw;
     font-size: 1.5rem;
@@ -181,7 +181,7 @@ body {
     display: inline-flex;
     text-decoration: none;
     color: #e8e6e3;
-    margin: 0.7em 1.2em 0.7em 1.2em;
+    margin: 0.7em;
     font-size: 1.5rem;
 }
 
@@ -244,9 +244,7 @@ body {
     transition: 0.3s ease;
 }
 
-.article img:hover {
-    filter: opacity(0.5);
-}
+
 
 .article .author {
     display: flex;
