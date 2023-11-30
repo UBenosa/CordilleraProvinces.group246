@@ -98,30 +98,6 @@ body {
     text-shadow: 2px 2px 8px #0c0c0c;
 }
 
-#navbar {
-    top: 2vh;
-    z-index: 11;
-    position: absolute;
-    left: 50vw;
-    transform: translateX(-50%);
-}
-
-#navbar a {
-    color: #e8e6e3;
-    font-size: 1.2vw;
-    text-decoration: none;
-    transition: 0.3s ease;
-    margin: 1.5vw;
-}
-
-#navbar a:hover {
-    opacity: 0.5;
-}
-
-#navbar a:nth-child(2) {
-    opacity: 0.5;
-}
-
 #header {
     color: #e8e6e3;
     text-align: center;
