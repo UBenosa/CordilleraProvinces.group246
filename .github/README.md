@@ -15,5 +15,5 @@
 - ~~Page transitions~~
 - ~~Images section~~
 - ~~Animation on scroll~~
-- Add the other articles
-- Add background effect
+- ~~Add the other articles~~
+- ~~Add background effect~~
