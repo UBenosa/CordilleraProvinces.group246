@@ -128,7 +128,7 @@ body {
     background-color: #A0A0A0;
     position: relative;
     left: 0%;
-    opacity: 20%;
+    opacity: 60%;
 }
 
 @keyframes scale-out {
