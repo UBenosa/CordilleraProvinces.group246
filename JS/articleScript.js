@@ -16,6 +16,7 @@ function toggleArticle(articleId) {
     // Show the selected article
     var article = document.getElementById(articleId);
     article.style.display = "block";
+    console.log(articleId, article.style.display)
 
     var links = document.getElementsByTagName("a");
     for (var i = 0; i < links.length; i++) {
@@ -31,9 +32,7 @@ function toggleArticle(articleId) {
 window.addEventListener("scroll", function (event) {
     let scrollY = this.scrollY;
     let maxScrollY = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    scroll_percentage = (scrollY / maxScrollY) * 100
-    console.log(scroll_percentage)
-    
+    scroll_percentage = (scrollY / maxScrollY) * 100;
     document.getElementById('scrollbar').style.top = `${scroll_percentage}%`;
     
 });
