@@ -124,6 +124,7 @@ body {
     bottom: 25px;
     left: 50%;
     z-index: -1;
+    opacity: 40%;
 }
 
 #scrollbar-thumb {
@@ -133,7 +134,7 @@ body {
     background-color: #ffffff;
     position: relative;
     left: 0%;
-    opacity: 60%;
+    opacity: 50%;
 }
 
 @keyframes scale-out {
