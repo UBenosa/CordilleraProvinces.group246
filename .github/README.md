@@ -59,7 +59,7 @@ The website has many features, including:
 * Informative articles about the provinces authored by 15 students
 * Various images highlighting the beauty of the Cordillera region.
 
-Be sure to check the website out, we poured our heart and sleep for it! (Mainly because we procrastinated a lot).
+Be sure to [check the website out](https://ubenosa.github.io/CordilleraProvinces.group246/index.html), we poured our heart and sleep for it! (Mainly because we procrastinated a lot).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,14 +69,9 @@ Be sure to check the website out, we poured our heart and sleep for it! (Mainly 
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)]
+* [![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)]
+* [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,9 +157,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/UBenosa/CordilleraProvinces.group246](https://github.com/UBenosa/CordilleraProvinces.group246)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,20 +169,28 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
+* [Favicon](https://favicon.io/)
+* [CSS Gradient](https://cssgradient.io/)
+* [Text to HTML](https://www.textfixer.com/html/convert-text-html.php)
+* [W3schools](https://www.w3schools.com/)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Markdown Badges](https://shields.io/)
+* [Bing Image Creator](https://www.bing.com/create)
+* [MDN Web Docs](https://developer.mozilla.org/en-US/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+https://ubenosa.github.io/CordilleraProvinces.group246/index.html
+
+# IT IS FINALLY DONE! (I THINK)
+probably
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/UBenosa/CordilleraProvinces.group246.svg?style=for-the-badge
 [contributors-url]: https://github.com/UBenosa/CordilleraProvinces.group246/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/UBenosa/CordilleraProvinces.group246.svg?style=for-the-badge
@@ -204,8 +205,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-url]: https://www.linkedin.com/in/zyrus-a27a81219/
 [product-screenshot]: Documentation-Images/article-header.jpg
 
-# Cordillera Provinces Website (Groups 2, 4, & 6)
-https://ubenosa.github.io/CordilleraProvinces.group246/index.html
-
-# IT IS FINALLY DONE! (I THINK)
-probably
