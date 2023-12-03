@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/UBenosa/CordilleraProvinces.group246">
-    <img src="Images\Icons\icon.png" alt="Logo" width="80" height="80">
+    <img src="../Images/Icons/icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Cordillera Heritage E-Blog</h3>
@@ -202,7 +202,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/UBenosa/CordilleraProvinces.group246/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/zyrus-a27a81219/
-[product-screenshot]: .github/Documentation-Images/article-header.jpg
+[product-screenshot]: Documentation-Images/article-header.jpg
 
 # Cordillera Provinces Website (Groups 2, 4, & 6)
 https://ubenosa.github.io/CordilleraProvinces.group246/index.html
