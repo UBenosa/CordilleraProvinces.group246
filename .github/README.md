@@ -11,8 +11,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <i src="Images/Icons/icon.png" alt="Logo" width="160px" height="160px">
+  <a href="https://github.com/UBenosa/CordilleraProvinces.group246/">
+    <i src="/Images/Icons/icon.png" alt="Logo" width="160px" height="160px">
   </a>
 
   <h3 align="center">Cordillera Heritage E-Blog</h3>
@@ -208,7 +208,7 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/UBenosa/CordilleraProvinces.group246.svg?style=for-the-badge
 [forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
