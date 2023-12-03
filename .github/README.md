@@ -34,10 +34,10 @@
     <i src="Images/Icons/icon.png" alt="Logo" width="160px" height="160px">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Cordillera Heritage E-Blog</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    In partial fulfillment of the requirements for the subject of Readings in the Philippine History (HIST 100), 1st Year in the University of the Cordilleras
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
