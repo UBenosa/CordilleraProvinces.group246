@@ -180,6 +180,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Bing Image Creator](https://www.bing.com/create)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/)
 * [Visual Studio Code](https://code.visualstudio.com/)
+* [Camille Mormal](https://camillemormal.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
