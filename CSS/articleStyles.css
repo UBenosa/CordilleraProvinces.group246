@@ -135,6 +135,19 @@ body {
     }
 }
 
+#eye {
+    width: 40px;
+    filter: invert(1) drop-shadow(5px 5px 5px #000) opacity(0.7);
+    top: 92vh;
+    left: 5vh;
+    position: absolute;
+    transition: 0.4s ease;
+}
+
+#eye:hover {
+    filter: invert(1) drop-shadow(5px 5px 5px #000) opacity(0.5);
+}
+
 .header p {
     color: #e8e6e3;
     text-decoration: none;
