@@ -200,7 +200,7 @@ probably
 [issues-shield]: https://img.shields.io/github/issues/UBenosa/CordilleraProvinces.group246.svg?style=for-the-badge
 [issues-url]: https://github.com/UBenosa/CordilleraProvinces.group246/issues
 [license-shield]: https://img.shields.io/github/license/UBenosa/CordilleraProvinces.group246.svg?style=for-the-badge
-[license-url]: https://github.com/UBenosa/CordilleraProvinces.group246/blob/master/LICENSE.txt
+[license-url]: https://github.com/UBenosa/CordilleraProvinces.group246/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/zyrus-a27a81219/
 [product-screenshot]: Documentation-Images/article-header.jpg
