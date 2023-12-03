@@ -1,4 +1,5 @@
 # Cordillera Provinces Website (Groups 2, 4, & 6)
+https://ubenosa.github.io/CordilleraProvinces.group246/index.html
 ## To Do List
 - ~~Add province images on homepage~~
 - ~~Show province title on image hover~~
