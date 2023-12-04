@@ -167,8 +167,6 @@ Project Link: [https://github.com/UBenosa/CordilleraProvinces.group246](https://
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
 * [Choose an Open Source License](https://choosealicense.com)
 * [Favicon](https://favicon.io/)
 * [CSS Gradient](https://cssgradient.io/)
